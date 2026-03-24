@@ -3,548 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greenwich Plumbers | 24hr Emergency Plumbing &amp; Multi-Trade London</title>
+    <title>Greenwich Plumbers | 24hr Emergency Plumbing London</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap');
-        
-        :root {
-            --teal: #0F766E;
-        }
-        
-        .tail-container {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        .tail-container { font-family: 'Inter', system_ui, sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)), 
-                             url('https://picsum.photos/id/1015/2000/1200');
+            background-image: linear-gradient(rgba(15, 118, 110, 0.8), rgba(15, 118, 110, 0.85)), 
+                              url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-        
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #0F766E;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        
-        .floating-whatsapp {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-        
-        .mario-red {
-            color: #E4000F;
-        }
+        .service-card:hover { transform: translateY(-12px); }
     </style>
 </head>
-<body class="tail-container bg-white text-gray-900 overflow-x-hidden">
+<body class="tail-container bg-white">
+
     <!-- NAVBAR -->
-    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <!-- REPLACE THIS WITH YOUR LOGO -->
-                    <img id="logo" src="logo.png" alt="Greenwich Plumbers Logo" 
-                         class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/180x60/0F766E/FFFFFF?text=Greenwich+Plumbers';">
-                    <div>
-                        <span class="text-2xl font-bold tracking-tight text-teal-800">Greenwich</span>
-                        <span class="text-2xl font-bold tracking-tight text-red-600">Plumbers</span>
-                    </div>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#services" onclick="smoothScrollTo('services')" class="nav-link text-gray-700 hover:text-teal-700">Services</a>
-                    <a href="#guarantees" onclick="smoothScrollTo('guarantees')" class="nav-link text-gray-700 hover:text-teal-700">Guarantees</a>
-                    <a href="#whyus" onclick="smoothScrollTo('whyus')" class="nav-link text-gray-700 hover:text-teal-700">Why Us</a>
-                    <a href="#contact" onclick="smoothScrollTo('contact')" class="nav-link text-gray-700 hover:text-teal-700">Contact</a>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <a href="tel:07961618546" 
-                       class="hidden sm:flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-2xl font-semibold transition-all">
-                        <i class="fas fa-phone"></i>
-                        <span>07961 618 546</span>
-                    </a>
-                    
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
-                       target="_blank"
-                       class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl font-semibold transition-all">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                        <span class="hidden sm:inline">WhatsApp</span>
-                    </a>
-                </div>
+    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-12" 
+                     onerror="this.src='https://via.placeholder.com/200x60/0F766E/fff?text=Greenwich+Plumbers';">
+                <span class="text-2xl font-bold text-teal-800">Greenwich Plumbers</span>
             </div>
+            <a href="tel:07961618546" class="bg-teal-700 text-white px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-teal-800">
+                <i class="fas fa-phone"></i> 07961 618 546
+            </a>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="hero-bg h-screen flex items-center text-white relative">
-        <div class="max-w-7xl mx-auto px-6 pt-20">
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
             <div class="max-w-2xl">
-                <!-- 10% OFF BADGE -->
-                <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg shadow-xl mb-6">
-                    <i class="fas fa-tags"></i>
-                    <span>10% OFF ALL SERVICES</span>
+                <div class="inline-flex bg-white/90 text-teal-900 px-6 py-3 rounded-3xl font-bold mb-6">
+                    10% OFF ALL SERVICES
                 </div>
-
-                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                    London’s superior 24hr service company<br>will fix it!
+                <h1 class="text-5xl md:text-7xl font-bold leading-none mb-6">
+                    London’s superior 24hr service company will fix it!
                 </h1>
+                <p class="text-3xl mb-10">In the meantime… pop the kettle on!</p>
                 
-                <p class="text-2xl md:text-3xl font-light mb-10 text-white/90">
-                    In the meantime… pop the kettle on!
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="tel:07961618546" 
-                       class="flex-1 md:flex-none bg-white text-teal-800 hover:bg-amber-50 font-bold text-xl px-10 py-6 rounded-3xl flex items-center justify-center gap-3 shadow-2xl transition-all hover:scale-105">
-                        <i class="fas fa-phone text-2xl"></i>
-                        <span>CALL NOW: 07961 618 546</span>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="tel:07961618546" class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center justify-center gap-3 hover:scale-105 transition">
+                        <i class="fas fa-phone"></i> CALL NOW
                     </a>
-                    
                     <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
-                       target="_blank"
-                       class="flex-1 md:flex-none bg-green-500 hover:bg-green-600 font-bold text-xl px-10 py-6 rounded-3xl flex items-center justify-center gap-3 shadow-2xl transition-all hover:scale-105">
-                        <i class="fab fa-whatsapp text-3xl"></i>
-                        <span>WhatsApp Us</span>
+                       target="_blank" class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center justify-center gap-3 hover:scale-105 transition">
+                        <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
                     </a>
-                </div>
-
-                <div class="mt-8 flex items-center gap-4 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-clock text-amber-300"></i>
-                        <span>1-hour response • 24/7</span>
-                    </div>
-                    <div class="h-4 w-px bg-white/40"></div>
-                    <div>Serving Greenwich &amp; all of London</div>
                 </div>
             </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70">
-            <div class="text-xs tracking-widest mb-2">SCROLL TO SEE SERVICES</div>
-            <i class="fas fa-chevron-down animate-bounce text-3xl"></i>
-        </div>
-
-        <!-- Mario-style red accent -->
-        <div class="absolute top-8 right-8 bg-red-600 text-white text-sm font-bold px-6 py-2 rounded-2xl rotate-12 shadow-xl hidden lg:block">
-            SUPER FAST RESPONSE
         </div>
     </header>
 
-    <!-- WHY US -->
-    <section id="whyus" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-block bg-teal-100 text-teal-800 px-5 py-2 rounded-3xl font-semibold text-sm mb-6">EST. 2018 • GREENWICH BASED</div>
-                    <h2 class="text-5xl font-bold leading-tight tracking-tight mb-8">
-                        Local trustworthy Greenwich plumbers who actually answer the phone
-                    </h2>
-                    
-                    <div class="space-y-6 text-lg">
-                        <div class="flex gap-4">
-                            <i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
-                            <div>
-                                <strong>1-hour average response time</strong> across London
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
-                            <div>
-                                Real local engineers – no call centres
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
-                            <div>
-                                Fully insured • DBS checked • Polite &amp; clean
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
-                            <div>
-                                Fixed price quotes before we start (no hidden charges)
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-10 border-l-4 border-teal-600 pl-6 italic text-xl">
-                        “They turned up in under 40 minutes on a Sunday night and sorted my burst pipe. Absolute legends!”
-                        <div class="mt-4 font-semibold text-teal-700">— Sarah T., Greenwich</div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-xl p-8">
-                    <img src="https://picsum.photos/id/201/800/600" alt="Greenwich Plumbers engineer" 
-                         class="rounded-2xl w-full shadow-inner">
-                    <div class="mt-6 text-center text-sm text-gray-500">
-                        One of our local Greenwich engineers on a routine boiler service
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="uppercase tracking-widest text-teal-600 font-semibold mb-3">What we fix</div>
-                <h2 class="text-5xl font-bold">All trades. One trusted number.</h2>
-                <p class="mt-4 text-xl text-gray-600 max-w-xl mx-auto">
-                    From emergency leaks to full bathroom refurbs and everything in between
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-faucet"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Plumbing</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Leaks &amp; burst pipes</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Showers &amp; taps</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Toilets &amp; cisterns</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Hot water problems</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Heating &amp; Boilers</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Boiler repairs &amp; installs</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Central heating</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Radiator issues</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Gas safety checks</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Drainage</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Blocked drains</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> CCTV drain surveys</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> High-pressure jetting</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Manhole &amp; sewer issues</li>
-                    </ul>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-bath"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Bathrooms</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Full bathroom refurbishment</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Suite installations</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Tiling &amp; waterproofing</li>
-                    </ul>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Electrics</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Rewiring &amp; sockets</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Lighting &amp; switches</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Fuse board upgrades</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Emergency call-outs</li>
-                    </ul>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-snowflake"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Air Conditioning</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Installation &amp; repair</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Servicing</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Refrigerant top-ups</li>
-                    </ul>
-                </div>
-
-                <!-- Service 7 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Carpentry</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Doors &amp; skirting</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Shelving &amp; cupboards</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Floorboards &amp; repairs</li>
-                    </ul>
-                </div>
-
-                <!-- Service 8 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 group">
-                    <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3">Roofing &amp; Building</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Roof repairs &amp; leaks</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Guttering</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-teal-500 mt-1 text-xs"></i> Small building works</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center bg-teal-50 border border-teal-100 rounded-3xl p-10">
-                <p class="text-2xl font-medium text-teal-900">
-                    Larger projects &amp; full renovations? <span class="font-bold">We’ve got you covered too.</span>
-                </p>
-                <p class="mt-2 text-teal-700">From loft conversions to complete property makeovers – just call us.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GUARANTEES -->
-    <section id="guarantees" class="py-24 bg-gradient-to-br from-teal-900 to-teal-800 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">Your peace of mind is guaranteed</h2>
-                <p class="text-xl text-teal-100">We stand by every job we do</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10 text-center">
-                    <div class="text-6xl mb-6">🔨</div>
-                    <h3 class="text-3xl font-bold mb-2">12 Months</h3>
-                    <p class="text-teal-100 text-xl">Workmanship Guarantee</p>
-                    <p class="mt-8 text-sm leading-relaxed text-teal-200">
-                        If anything goes wrong with our work within 12 months, we’ll come back and fix it completely free of charge.
-                    </p>
-                </div>
-
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10 text-center">
-                    <div class="text-6xl mb-6">🔥</div>
-                    <h3 class="text-3xl font-bold mb-2">Up to 12 Years</h3>
-                    <p class="text-teal-100 text-xl">Boiler Guarantee</p>
-                    <p class="mt-8 text-sm leading-relaxed text-teal-200">
-                        All new boiler installations come with manufacturer warranty plus our own extended labour guarantee.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BIG 10% OFF PROMO -->
-    <section class="py-20 bg-red-600 text-white">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-3 bg-white/20 px-8 py-3 rounded-3xl mb-6">
-                <i class="fas fa-gift text-3xl"></i>
-                <span class="uppercase tracking-widest font-bold">Limited time offer</span>
-            </div>
-            <h2 class="text-6xl font-bold leading-none mb-6">10% OFF<br>ALL SERVICES</h2>
-            <p class="text-2xl max-w-md mx-auto">Just mention this website when you call or message us</p>
-            
-            <a href="tel:07961618546" 
-               class="mt-10 inline-flex items-center gap-4 bg-white text-red-600 hover:bg-amber-100 font-bold text-2xl px-12 py-7 rounded-3xl transition-all">
-                <i class="fas fa-phone"></i>
-                CLAIM YOUR 10% NOW – 07961 618 546
-            </a>
-        </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact" class="py-24 bg-gray-50">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold mb-4">Need help right now?</h2>
-                <p class="text-xl text-gray-600">If you require professional assistance please fill out a brief description and we will get straight back to you.</p>
-            </div>
-
-            <form id="contactForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-8">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                        <input id="name" type="text" required 
-                               class="w-full px-6 py-5 border border-gray-200 rounded-2xl focus:outline-none focus:border-teal-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                        <input id="phone" type="tel" required 
-                               class="w-full px-6 py-5 border border-gray-200 rounded-2xl focus:outline-none focus:border-teal-500">
-                    </div>
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">What’s the problem?</label>
-                    <textarea id="message" rows="5" required placeholder="e.g. Burst pipe in kitchen, water everywhere..."
-                              class="w-full px-6 py-5 border border-gray-200 rounded-3xl focus:outline-none focus:border-teal-500 resize-none"></textarea>
-                </div>
-
-                <button onclick="submitForm(event)" type="button"
-                        class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold text-xl py-7 rounded-3xl transition-all">
-                    SEND MESSAGE – WE’LL CALL YOU BACK QUICKLY
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-teal-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-16">
-            <div class="grid md:grid-cols-3 gap-10">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-10" 
-                             onerror="this.src='https://via.placeholder.com/140x50/0F766E/FFFFFF?text=Greenwich+Plumbers';">
-                        <span class="text-3xl font-bold">Greenwich Plumbers</span>
-                    </div>
-                    <p class="text-teal-300 leading-relaxed">
-                        Not just local plumbers.<br>
-                        Your 24/7 multi-trade heroes across London.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Get in touch 24/7</h4>
-                    <a href="tel:07961618546" class="block text-4xl font-bold hover:text-teal-300 transition-colors">
-                        07961 618 546
-                    </a>
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
-                       target="_blank"
-                       class="mt-4 inline-flex items-center gap-3 text-teal-300 hover:text-white">
-                        <i class="fab fa-whatsapp text-3xl"></i>
-                        <span>Message us on WhatsApp</span>
-                    </a>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Service Area</h4>
-                    <p class="text-teal-300 leading-relaxed">
-                        Greenwich • Blackheath • Charlton • Woolwich • Deptford • Lewisham •<br>
-                        Canary Wharf • Docklands • All of Greater London
-                    </p>
-                    <div class="mt-8 text-2xl font-bold text-white">
-                        Serving Greenwich &amp; all of London – 24/7!!!
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-teal-800 mt-16 pt-8 text-center text-teal-400 text-sm">
-                © 2026 Greenwich Plumbers. All rights reserved. • 
-                Fully insured • Gas Safe • NICEIC registered
-            </div>
-        </div>
+    <!-- FOOTER (minimal for testing) -->
+    <footer class="bg-teal-900 text-white py-12 text-center">
+        <p class="text-2xl font-bold">Greenwich Plumbers • 07961 618 546</p>
+        <p class="mt-2">Serving Greenwich &amp; all of London – 24/7</p>
     </footer>
 
     <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
        target="_blank"
-       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl floating-whatsapp z-50 text-4xl">
+       class="fixed bottom-6 right-24 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-50 hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
-    <script>
-        // Tailwind script already included via CDN
-
-        function smoothScrollTo(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-
-        function submitForm(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            
-            if (name && phone) {
-                alert(`Thank you ${name}! 🎉\n\nOur team will call you back on ${phone} within minutes.\n\nIn the meantime… pop the kettle on! ☕`);
-                
-                // Clear form
-                document.getElementById('contactForm').reset();
-            } else {
-                alert("Please fill in your name and phone number so we can call you back quickly.");
-            }
-        }
-
-        // Keyboard support for form
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && document.activeElement.tagName === 'TEXTAREA') {
-                submitForm(e);
-            }
-        });
-
-        // Make logo fallback nicer
-        window.addEventListener('load', () => {
-            const logo = document.getElementById('logo');
-            if (logo.complete && logo.naturalWidth === 0) {
-                logo.src = 'https://via.placeholder.com/220x70/0F766E/FFFFFF?text=Greenwich+Plumbers';
-            }
-        });
-
-        // Prevent accidental form submit
-        document.getElementById('contactForm').addEventListener('submit', (e) => e.preventDefault());
+    <!-- ==================== TAWK.TO LIVE CHAT ==================== -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69c2aea5fb7ce31c36765265;   // 
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
+    <!-- ==================== END TAWK.TO ==================== -->
+
 </body>
 </html>
