@@ -3,307 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rates | Greenwich Plumbers – Transparent Pricing London</title>
+    <title>Greenwich Plumbers | 24hr Emergency Plumbing & Multi-Trade London</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        .tail-container { font-family: 'Inter', system-ui, sans-serif; }
-        
-        .price-card {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+      
+        :root { --teal: #0F766E; }
+        .tail-container { font-family: 'Inter', system_ui, sans-serif; }
+      
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)),
+                             url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+      
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
+        }
+      
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0F766E;
             transition: all 0.3s ease;
         }
-        .price-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        
-        .time-header {
-            background: linear-gradient(135deg, #0F766E, #14B8A6);
-        }
+        .nav-link:hover:after { width: 100%; }
     </style>
 </head>
-<body class="tail-container bg-gray-50 text-gray-900">
+<body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-    <!-- NAVBAR - Same as Homepage -->
+    <!-- NAVBAR -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-           
-            <!-- Logo Only -->
-            <img src="logo.png" 
-     alt="Greenwich Plumbers Logo" 
-     class="h-28 w-auto transition-all hover:scale-105">
+          
+            <!-- Logo -->
+            <a href="https://site-ctrl.github.io/Greenwich-plumbers/">
+                <img src="logo.png"
+                     alt="Greenwich Plumbers Logo"
+                     class="h-28 w-auto transition-all hover:scale-105">
             </a>
-
+           
             <!-- Menu Links -->
             <div class="hidden md:flex items-center gap-8 text-base font-medium">
-                <a href="/" class="hover:text-teal-600 transition-colors">Home</a>
-                <a href="#services" class="hover:text-teal-600 transition-colors">Services</a>
-                <a href="rates/" class="text-teal-600 font-semibold">Rates</a>
-                <a href="#guarantees" class="hover:text-teal-600 transition-colors">Guarantees</a>
-                <a href="#contact" class="hover:text-teal-600 transition-colors">Contact</a>
+                <a href="https://site-ctrl.github.io/Greenwich-plumbers/" 
+                   class="nav-link text-teal-700 font-semibold">Home</a>
+                <a href="#services" onclick="smoothScrollTo('services')" class="nav-link hover:text-teal-600 transition-colors">Services</a>
+                <a href="#why-us" onclick="smoothScrollTo('why-us')" class="nav-link hover:text-teal-600 transition-colors">Why Us</a>
+                <a href="rates/" class="nav-link text-teal-600 font-semibold hover:text-teal-700 transition-colors">Rates</a>
+                <a href="#guarantees" onclick="smoothScrollTo('guarantees')" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
+                <a href="#contact" onclick="smoothScrollTo('contact')" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
             </div>
 
-            <!-- Call Button -->
-            <a href="tel:07961618546" 
-               class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
-                <i class="fas fa-phone"></i>
-                <span class="hidden sm:inline">07961 618 546</span>
-            </a>
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
+                   target="_blank"
+                   class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+              
+                <a href="tel:07961618546"
+                   class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fas fa-phone"></i>
+                    <span class="hidden sm:inline">07961 618 546</span>
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-20">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-3xl mb-6">
-                <i class="fas fa-tags text-2xl"></i>
-                <span class="font-semibold text-lg">10% OFF ALL SERVICES</span>
+    <header class="hero-bg h-screen flex items-center text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg mb-6">
+                    <i class="fas fa-tags"></i> 10% OFF ALL SERVICES
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+                    London’s superior 24hr service company<br>will fix it!
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-10">In the meantime… pop the kettle on!</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="tel:07961618546" 
+                       class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
+                        <i class="fas fa-phone"></i> CALL NOW
+                    </a>
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
+                       target="_blank" 
+                       class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
+                        <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
+                    </a>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
-                Transparent Rates.<br>Superior Service.
-            </h1>
-            <p class="text-xl md:text-2xl max-w-2xl mx-auto text-teal-100">
-                London's superior 24hr service company – fixed price or hourly, no hidden fees.
-            </p>
-            <a href="tel:07961618546" 
-               class="mt-10 inline-block bg-white text-teal-700 font-bold text-xl px-12 py-6 rounded-3xl shadow-xl hover:scale-105 transition-all">
-                CALL NOW: 07961 618 546
-            </a>
         </div>
     </header>
 
-    <!-- RATES SECTION -->
-    <section class="py-20 bg-white">
+    <!-- WHY US -->
+    <section id="why-us" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-teal-100 text-teal-800 px-5 py-2 rounded-3xl font-semibold text-sm mb-6">LOCAL GREENWICH PLUMBERS</div>
+                    <h2 class="text-5xl font-bold leading-tight mb-8">Real people. Real fast. Real fixes.</h2>
+                    <div class="space-y-6 text-lg">
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div><strong>1-hour average response</strong> time in London</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>No call centres — real local engineers</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>Fully insured & polite team</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>Fixed price — no hidden charges</div></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Greenwich Plumber Engineer" class="rounded-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Our 2026 Rates</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    All prices are <strong>per hour + VAT</strong>. 1 hour minimum charge, then charged in 15-minute increments.<br>
-                    <span class="text-red-600 font-medium">10% OFF all labour when you mention this website.</span>
-                </p>
+                <h2 class="text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">All trades. One number. 24/7 across London</p>
             </div>
-
-            <!-- Monday to Friday Rates -->
-            <div class="mb-16">
-                <h3 class="text-3xl font-semibold text-center mb-8 flex items-center justify-center gap-3">
-                    <span class="h-px flex-1 bg-gray-200"></span>
-                    Monday – Friday
-                    <span class="h-px flex-1 bg-gray-200"></span>
-                </h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="price-card bg-white border border-teal-200 rounded-3xl p-8">
-                        <div class="time-header text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">7am – 7pm</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span class="font-medium">Plumbing</span><span class="font-bold">£120</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Heating & Gas</span><span class="font-bold">£150</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Commercial Heating & Gas</span><span class="font-bold">£190</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Drains</span><span class="font-bold">£150</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Electrics</span><span class="font-bold">£120</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Air Conditioning</span><span class="font-bold">£135</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Carpentry</span><span class="font-bold">£95</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Building</span><span class="font-bold">£95</span></div>
-                            <div class="flex justify-between"><span class="font-medium">Roofing</span><span class="font-bold">£105</span></div>
-                        </div>
-                    </div>
-
-                    <div class="price-card bg-white border border-orange-200 rounded-3xl p-8">
-                        <div class="bg-orange-500 text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">7pm – 12am</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span>Plumbing</span><span class="font-bold">£195</span></div>
-                            <div class="flex justify-between"><span>Heating & Gas</span><span class="font-bold">£200</span></div>
-                            <div class="flex justify-between"><span>Commercial Heating & Gas</span><span class="font-bold">£230</span></div>
-                            <div class="flex justify-between"><span>Drains</span><span class="font-bold">£205</span></div>
-                            <div class="flex justify-between"><span>Electrics</span><span class="font-bold">£180</span></div>
-                            <div class="flex justify-between"><span>Air Conditioning</span><span class="font-bold">£190</span></div>
-                            <div class="flex justify-between"><span>Carpentry</span><span class="font-bold">£180</span></div>
-                            <div class="flex justify-between"><span>Building</span><span class="font-bold">£170</span></div>
-                            <div class="flex justify-between"><span>Roofing</span><span class="font-bold">£180</span></div>
-                        </div>
-                    </div>
-
-                    <div class="price-card bg-white border border-red-200 rounded-3xl p-8">
-                        <div class="bg-red-600 text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">12am – 7am</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span>Plumbing</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Heating & Gas</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Commercial Heating & Gas</span><span class="font-bold">£400</span></div>
-                            <div class="flex justify-between"><span>Drains</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Electrics</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Air Conditioning</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Carpentry</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Building</span><span class="font-bold">£325</span></div>
-                            <div class="flex justify-between"><span>Roofing</span><span class="font-bold">£350</span></div>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards (9 as requested) -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-faucet text-5xl text-teal-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Plumbing</h3>
+                    <p class="text-gray-600">Leaks, burst pipes, showers, taps, toilets, water tanks & more</p>
                 </div>
-            </div>
-
-            <!-- Weekend Rates -->
-            <div>
-                <h3 class="text-3xl font-semibold text-center mb-8 flex items-center justify-center gap-3">
-                    <span class="h-px flex-1 bg-gray-200"></span>
-                    Weekends & Bank Holidays
-                    <span class="h-px flex-1 bg-gray-200"></span>
-                </h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="price-card bg-white border border-teal-200 rounded-3xl p-8">
-                        <div class="time-header text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">7am – 7pm</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span>Plumbing</span><span class="font-bold">£195</span></div>
-                            <div class="flex justify-between"><span>Heating & Gas</span><span class="font-bold">£200</span></div>
-                            <div class="flex justify-between"><span>Commercial Heating & Gas</span><span class="font-bold">£230</span></div>
-                            <div class="flex justify-between"><span>Drains</span><span class="font-bold">£210</span></div>
-                            <div class="flex justify-between"><span>Electrics</span><span class="font-bold">£180</span></div>
-                            <div class="flex justify-between"><span>Air Conditioning</span><span class="font-bold">£190</span></div>
-                            <div class="flex justify-between"><span>Carpentry</span><span class="font-bold">£180</span></div>
-                            <div class="flex justify-between"><span>Building</span><span class="font-bold">£170</span></div>
-                            <div class="flex justify-between"><span>Roofing</span><span class="font-bold">£180</span></div>
-                        </div>
-                    </div>
-
-                    <div class="price-card bg-white border border-orange-200 rounded-3xl p-8">
-                        <div class="bg-orange-500 text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">7pm – 12am</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span>Plumbing</span><span class="font-bold">£230</span></div>
-                            <div class="flex justify-between"><span>Heating & Gas</span><span class="font-bold">£235</span></div>
-                            <div class="flex justify-between"><span>Commercial Heating & Gas</span><span class="font-bold">£260</span></div>
-                            <div class="flex justify-between"><span>Drains</span><span class="font-bold">£240</span></div>
-                            <div class="flex justify-between"><span>Electrics</span><span class="font-bold">£210</span></div>
-                            <div class="flex justify-between"><span>Air Conditioning</span><span class="font-bold">£220</span></div>
-                            <div class="flex justify-between"><span>Carpentry</span><span class="font-bold">£210</span></div>
-                            <div class="flex justify-between"><span>Building</span><span class="font-bold">£200</span></div>
-                            <div class="flex justify-between"><span>Roofing</span><span class="font-bold">£210</span></div>
-                        </div>
-                    </div>
-
-                    <div class="price-card bg-white border border-red-200 rounded-3xl p-8">
-                        <div class="bg-red-600 text-white text-center py-4 rounded-2xl mb-8">
-                            <p class="font-semibold">12am – 7am</p>
-                        </div>
-                        <div class="space-y-6 text-lg">
-                            <div class="flex justify-between"><span>Plumbing</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Heating & Gas</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Commercial Heating & Gas</span><span class="font-bold">£400</span></div>
-                            <div class="flex justify-between"><span>Drains</span><span class="font-bold">£400</span></div>
-                            <div class="flex justify-between"><span>Electrics</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Air Conditioning</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Carpentry</span><span class="font-bold">£375</span></div>
-                            <div class="flex justify-between"><span>Building</span><span class="font-bold">£350</span></div>
-                            <div class="flex justify-between"><span>Roofing</span><span class="font-bold">£375</span></div>
-                        </div>
-                    </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-fire text-5xl text-red-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Heating & Boilers</h3>
+                    <p class="text-gray-600">Boiler repair, installation, servicing & breakdowns</p>
                 </div>
-            </div>
-
-            <!-- Special Services -->
-            <div class="mt-16 bg-teal-50 border border-teal-200 rounded-3xl p-10">
-                <h3 class="text-2xl font-semibold mb-6 text-center">Special Fixed Services (Mon-Fri 7am-7pm)</h3>
-                <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                    <div class="bg-white p-6 rounded-2xl text-center">
-                        <p class="font-medium">Gas Safety Certificate or Boiler Service</p>
-                        <p class="text-3xl font-bold text-teal-700 mt-2">£145</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl text-center">
-                        <p class="font-medium">Boiler Service + Gas Safety Certificate</p>
-                        <p class="text-3xl font-bold text-teal-700 mt-2">£280</p>
-                    </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-tint text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Drainage</h3>
+                    <p class="text-gray-600">Blocked drains, CCTV surveys, high-pressure jetting</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-bath text-5xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Bathrooms</h3>
+                    <p class="text-gray-600">Full bathroom refurbishments & installations</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-bolt text-5xl text-yellow-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Electrics</h3>
+                    <p class="text-gray-600">Emergency electrics, rewiring & fault finding</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-snowflake text-5xl text-cyan-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Air Conditioning</h3>
+                    <p class="text-gray-600">Installation, repair & servicing</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-hammer text-5xl text-amber-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Carpentry</h3>
+                    <p class="text-gray-600">General carpentry, repairs & renovations</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200">
+                    <i class="fas fa-house-damage text-5xl text-orange-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Roofing & Building</h3>
+                    <p class="text-gray-600">Roof repairs, guttering & small building works</p>
+                </div>
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-200 col-span-1 md:col-span-2 lg:col-span-1">
+                    <i class="fas fa-tools text-5xl text-teal-700 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Full Renovations</h3>
+                    <p class="text-gray-600">Larger projects & whole-house refurbishments — managed end to end</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- IMPORTANT NOTES -->
-    <section class="py-16 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10">Important Information</h2>
-            <div class="grid md:grid-cols-2 gap-10 text-lg">
-                <ul class="space-y-4">
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> All prices shown are <strong>hourly labour rates + VAT</strong></li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> 1 hour minimum charge, then billed in 15-minute increments</li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> Materials supplied by us include a 30% trade mark-up</li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> Fixed price quotes available on request</li>
-                </ul>
-                <ul class="space-y-4">
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> We accept all major credit & debit cards</li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> Full detailed invoice provided on completion</li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> Payment due on receipt of invoice</li>
-                    <li class="flex gap-4"><i class="fas fa-check text-teal-400 mt-1"></i> 10% discount applies to labour only</li>
-                </ul>
+    <!-- GUARANTEES -->
+    <section id="guarantees" class="py-20 bg-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">Your Peace of Mind Guaranteed</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="bg-white/10 backdrop-blur p-10 rounded-3xl">
+                    <h3 class="text-4xl font-bold mb-2">12 Months</h3>
+                    <p class="text-teal-200 text-xl">Workmanship Guarantee</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-10 rounded-3xl">
+                    <h3 class="text-4xl font-bold mb-2">Up to 12 Years</h3>
+                    <p class="text-teal-200 text-xl">Boiler Guarantee</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CALL TO ACTION -->
-    <div class="bg-red-600 py-16 text-white text-center">
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-gray-50">
         <div class="max-w-2xl mx-auto px-6">
-            <p class="text-3xl font-bold mb-6">Ready for a fast, honest quote?</p>
-            <a href="tel:07961618546" 
-               class="inline-block bg-white text-red-600 font-bold text-2xl px-16 py-7 rounded-3xl shadow-2xl hover:scale-105 transition-all">
-                CALL 07961 618 546 NOW
-            </a>
+            <h2 class="text-5xl font-bold text-center mb-10">Need Help Right Now?</h2>
+            <form id="contactForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-6">
+                <input id="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border border-gray-200 rounded-2xl focus:outline-none focus:border-teal-600">
+                <input id="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border border-gray-200 rounded-2xl focus:outline-none focus:border-teal-600">
+                <textarea id="message" rows="4" placeholder="Brief description of the problem..." class="w-full px-6 py-5 border border-gray-200 rounded-3xl focus:outline-none focus:border-teal-600"></textarea>
+                <button onclick="submitForm(event)" type="button"
+                        class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-6 rounded-3xl text-xl transition-all">
+                    SEND MESSAGE — WE'LL CALL YOU BACK FAST
+                </button>
+            </form>
+            <p class="text-center text-gray-500 mt-6 text-sm">If you require professional assistance please fill out a brief description and we will get straight back to you.</p>
         </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="bg-teal-950 text-white py-12">
+    <footer class="bg-teal-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-3xl font-bold">Greenwich Plumbers</p>
-            <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300">07961 618 546</a>
-            <p class="mt-6">Serving Greenwich & all of London – 24/7!!!</p>
-            <p class="text-sm text-gray-400 mt-10">© 2026 Greenwich Plumbers. Transparent pricing, superior service.</p>
+            <p class="text-4xl font-bold mb-4">Greenwich Plumbers</p>
+            <a href="tel:07961618546" class="text-5xl font-bold block mt-2 hover:text-teal-300 transition-colors">07961 618 546</a>
+            <p class="mt-8 text-xl">Serving Greenwich & all of London – 24/7!!!</p>
+            <p class="mt-4 text-teal-300">NOT JUST LOCAL PLUMBERS</p>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP - Same position as homepage (further left) -->
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
        target="_blank"
-       class="fixed bottom-6 right-40 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60] transition-all">
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[9999] transition-all">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ==================== TAWK.TO LIVE CHAT - Same as Homepage ==================== -->
-    <!--Start of Tawk.to Script-->
+    <!-- TAWK.TO LIVE CHAT WIDGET -->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
-    <!--End of Tawk.to Script-->
 
     <script>
-        // Smooth scroll for any anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+        // Smooth scroll function
+        function smoothScrollTo(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
         }
+
+        // Contact form submission
+        function submitForm(e) {
+            e.preventDefault();
+            alert("✅ Thank you! Our team will call you back within minutes.\n\nIn the meantime… pop the kettle on! ☕");
+            document.getElementById('contactForm').reset();
+        }
+
+        // Tailwind script already loaded via CDN
     </script>
 </body>
 </html>
