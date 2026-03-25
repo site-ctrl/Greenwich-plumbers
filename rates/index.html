@@ -30,14 +30,16 @@
 </head>
 <body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-   <!-- NAVBAR - TEXT REMOVED -->
+    <!-- NAVBAR - Logo Only (Normal Size) -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
            
-            <!-- Logo Only (no text) -->
-           <img src="logo.png" 
-     alt="Greenwich Plumbers Logo" 
-     class="h-28 w-auto transition-all hover:scale-105">
+            <!-- Logo Only - Normal Size -->
+            <a href="/" class="flex items-center">
+                <img src="logo.png" 
+                     alt="Greenwich Plumbers Logo" 
+                     class="h-20 w-auto transition-all hover:scale-105">
+            </a>
 
             <!-- Menu Links -->
             <div class="hidden md:flex items-center gap-8 text-base font-medium">
@@ -89,23 +91,120 @@
         </div>
     </header>
 
-    <!-- WHY US, SERVICES, GUARANTEES, CONTACT, FOOTER sections remain the same as before -->
-    <!-- (Copy them from my previous full code if needed) -->
+    <!-- WHY US -->
+    <section id="why-us" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-teal-100 text-teal-800 px-5 py-2 rounded-3xl font-semibold text-sm mb-6">LOCAL GREENWICH PLUMBERS</div>
+                    <h2 class="text-5xl font-bold leading-tight mb-8">Real people. Real fast. Real fixes.</h2>
+                    <div class="space-y-6 text-lg">
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div><strong>1-hour average response</strong> time</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>No call centres — local engineers</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>Fully insured &amp; polite team</div></div>
+                        <div class="flex gap-4"><i class="fas fa-check-circle text-teal-600 text-2xl mt-1"></i><div>Fixed price — no hidden charges</div></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Engineer" class="rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- FLOATING WHATSAPP -->
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">All trades. One number. 24/7</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-faucet text-4xl text-teal-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Plumbing</h3>
+                    <p>Leaks, burst pipes, showers, taps, toilets &amp; more</p>
+                </div>
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-fire text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Heating &amp; Boilers</h3>
+                    <p>Boiler repair, installation &amp; servicing</p>
+                </div>
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-tint text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Drainage</h3>
+                    <p>Blocked drains, CCTV surveys &amp; jetting</p>
+                </div>
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-bath text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Bathrooms</h3>
+                    <p>Full bathroom refurbishments &amp; installs</p>
+                </div>
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-bolt text-4xl text-yellow-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Electrics</h3>
+                    <p>Emergency electrics &amp; rewiring</p>
+                </div>
+                <div class="service-card bg-white border rounded-3xl p-8">
+                    <i class="fas fa-snowflake text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Air Conditioning</h3>
+                    <p>Installation, repair &amp; servicing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section id="guarantees" class="py-20 bg-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">Your Peace of Mind Guaranteed</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="bg-white/10 p-10 rounded-3xl">
+                    <h3 class="text-3xl font-bold mb-2">12 Months</h3>
+                    <p class="text-teal-200">Workmanship Guarantee</p>
+                </div>
+                <div class="bg-white/10 p-10 rounded-3xl">
+                    <h3 class="text-3xl font-bold mb-2">Up to 12 Years</h3>
+                    <p class="text-teal-200">Boiler Guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-10">Need Help Right Now?</h2>
+            <form id="contactForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-6">
+                <input id="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl">
+                <input id="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl">
+                <textarea id="message" rows="4" placeholder="Brief description of the problem..." class="w-full px-6 py-5 border rounded-3xl"></textarea>
+                <button onclick="submitForm(event)" type="button"
+                        class="w-full bg-teal-700 text-white font-bold py-6 rounded-3xl text-xl">
+                    SEND MESSAGE — WE'LL CALL YOU BACK FAST
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-teal-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold">Greenwich Plumbers</p>
+            <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300">07961 618 546</a>
+            <p class="mt-6">Serving Greenwich &amp; all of London – 24/7!!!</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP - Moved to prevent overlap with Tawk.to -->
     <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
        target="_blank"
-       class="fixed bottom-6 right-28 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60]">
+       class="fixed bottom-6 right-28 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60] transition-all">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
-
-
-
-    
-
-    <!-- TAWK.TO LIVE CHAT -->
+    <!-- ==================== TAWK.TO LIVE CHAT ==================== -->
+    <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -117,11 +216,14 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
+    <!--End of Tawk.to Script-->
 
     <script>
         function smoothScrollTo(sectionId) {
             const element = document.getElementById(sectionId);
-            if (element) element.scrollIntoView({ behavior: 'smooth' });
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         function submitForm(e) {
