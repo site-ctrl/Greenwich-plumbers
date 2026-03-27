@@ -3,82 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rates | Greenwich Plumbers – Transparent 24hr Pricing</title>
+    <title>Greenwich Plumbers | 24hr Emergency Plumbing & Multi-Trade London</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
        
-        :root {
-            --teal: #0F766E;
-        }
-       
-        .tail-container {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
+        :root { --teal: #0F766E; }
+        .tail-container { font-family: 'Inter', system_ui, sans-serif; }
        
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)), url('https://picsum.photos/id/1015/2000/1200');
+            background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)),
+                             url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-        .price-card {
-            transition: all 0.3s ease;
+       
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .navbar {
-            transition: all 0.3s ease;
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
         }
-        .scroll-progress {
-            position: fixed;
-            top: 0;
+       
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
             left: 0;
-            height: 4px;
-            background: #0F766E;
-            z-index: 50;
+            background-color: #0F766E;
+            transition: all 0.3s ease;
         }
+        .nav-link:hover:after { width: 100%; }
     </style>
 </head>
-<body class="tail-container text-gray-800 overflow-x-hidden">
+<body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-    <!-- Progress Bar -->
-    <div id="progress-bar" class="scroll-progress w-0"></div>
+    <!-- NAVBAR - TEXT REMOVED -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+           
+            <!-- Logo Only (no text) -->
+           <img src="logo.png" 
+     alt="Greenwich Plumbers Logo" 
+     class="h-28 w-auto transition-all hover:scale-105">
+            
+            <!-- Menu Links -->
+            <div class="hidden md:flex items-center gap-8 text-base font-medium">
+                <a href="#home" onclick="smoothScrollTo('services')" class="hover:text-teal-600 transition-colors">Home</a>
+                <a href="#why-us" onclick="smoothScrollTo('why-us')" class="hover:text-teal-600 transition-colors">Why Us</a>
+                <a href="rates/" class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">Rates</a>
+                <a href="#guarantees" onclick="smoothScrollTo('guarantees')" class="hover:text-teal-600 transition-colors">Guarantees</a>
+                <a href="#contact" onclick="smoothScrollTo('contact')" class="hover:text-teal-600 transition-colors">Contact</a>
+            </div>
 
-    <!-- Sticky Navbar -->
-    <nav class="navbar bg-white border-b border-gray-100 shadow-sm fixed w-full z-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="px-6 py-4 flex justify-between items-center">
-                <!-- Logo -->
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="flex items-center gap-3">
-                    <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-12 w-auto">
-                    <div>
-                        <span class="text-2xl font-bold tracking-tight text-[#0F766E]">Greenwich</span>
-                        <span class="text-2xl font-bold tracking-tight text-red-600">Plumbers</span>
-                    </div>
+            <!-- Call Button -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
+                   target="_blank"
+                   class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="hover:text-[#0F766E] transition-colors">Home</a>
-                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#services" class="hover:text-[#0F766E] transition-colors">Services</a>
-                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#guarantees" class="hover:text-[#0F766E] transition-colors">Guarantees</a>
-                    <a href="rates.html" class="text-[#0F766E] font-semibold border-b-2 border-[#0F766E] pb-1">Rates</a>
-                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#contact" class="hover:text-[#0F766E] transition-colors">Contact</a>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <a href="tel:07961618546"
-                       class="hidden sm:flex items-center gap-2 bg-[#0F766E] text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-all active:scale-95">
-                        <i class="fas fa-phone"></i>
-                        <span>07961 618 546</span>
-                    </a>
-                   
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help%20with%20pricing!"
-                       target="_blank"
-                       class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full flex items-center gap-2 font-medium transition-all">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                        <span class="hidden sm:inline">WhatsApp</span>
-                    </a>
-                </div>
+               
+                <a href="tel:07961618546"
+                   class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
+                    <i class="fas fa-phone"></i>
+                    <span class="hidden sm:inline">07961 618 546</span>
+                </a>
             </div>
         </div>
     </nav>
