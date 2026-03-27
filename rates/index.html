@@ -22,21 +22,12 @@
             background-size: cover;
             background-position: center;
         }
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-       
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
         .price-card {
             transition: all 0.3s ease;
         }
         .navbar {
             transition: all 0.3s ease;
         }
-       
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -48,6 +39,7 @@
     </style>
 </head>
 <body class="tail-container text-gray-800 overflow-x-hidden">
+
     <!-- Progress Bar -->
     <div id="progress-bar" class="scroll-progress w-0"></div>
 
@@ -56,7 +48,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="px-6 py-4 flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3">
+                <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="flex items-center gap-3">
                     <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-12 w-auto">
                     <div>
                         <span class="text-2xl font-bold tracking-tight text-[#0F766E]">Greenwich</span>
@@ -66,11 +58,11 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="index.html" class="hover:text-[#0F766E] transition-colors">Home</a>
-                    <a href="index.html#services" class="hover:text-[#0F766E] transition-colors">Services</a>
-                    <a href="index.html#guarantees" class="hover:text-[#0F766E] transition-colors">Guarantees</a>
+                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="hover:text-[#0F766E] transition-colors">Home</a>
+                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#services" class="hover:text-[#0F766E] transition-colors">Services</a>
+                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#guarantees" class="hover:text-[#0F766E] transition-colors">Guarantees</a>
                     <a href="rates.html" class="text-[#0F766E] font-semibold border-b-2 border-[#0F766E] pb-1">Rates</a>
-                    <a href="index.html#contact" class="hover:text-[#0F766E] transition-colors">Contact</a>
+                    <a href="https://site-ctrl.github.io/Greenwich-plumbers/#contact" class="hover:text-[#0F766E] transition-colors">Contact</a>
                 </div>
 
                 <div class="flex items-center gap-4">
@@ -131,7 +123,6 @@
             </div>
         </div>
        
-        <!-- Floating badge -->
         <div class="hidden lg:block absolute bottom-12 right-12 bg-white text-[#0F766E] p-6 rounded-3xl shadow-2xl max-w-[240px]">
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-3xl">💷</div>
@@ -180,7 +171,7 @@
                 <p class="max-w-md mx-auto text-gray-600">All prices are per hour + VAT. 1 hour minimum charge, then charged in 15 minute increments.</p>
             </div>
 
-            <!-- Monday to Friday -->
+            <!-- Monday–Friday Pricing -->
             <div class="mb-16">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="h-px flex-1 bg-gradient-to-r from-transparent via-teal-300 to-transparent"></div>
@@ -272,7 +263,7 @@
                 </div>
             </div>
 
-            <!-- Weekend Pricing -->
+            <!-- Weekend & Bank Holidays -->
             <div>
                 <div class="flex items-center gap-4 mb-8">
                     <div class="h-px flex-1 bg-gradient-to-r from-transparent via-rose-300 to-transparent"></div>
@@ -282,51 +273,24 @@
                     </div>
                     <div class="h-px flex-1 bg-gradient-to-r from-transparent via-rose-300 to-transparent"></div>
                 </div>
-                <div class="bg-white rounded-3xl shadow-xl p-10">
-                    <div class="overflow-x-auto">
-                        <table class="w-full min-w-[800px]">
-                            <thead>
-                                <tr class="border-b">
-                                    <th class="text-left py-6 font-medium text-gray-500">Service</th>
-                                    <th class="text-center py-6 font-medium text-gray-500">7am – 7pm</th>
-                                    <th class="text-center py-6 font-medium text-gray-500">7pm – 12am</th>
-                                    <th class="text-center py-6 font-medium text-gray-500">12am – 7am</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y text-lg">
-                                <tr>
-                                    <td class="py-5 font-medium">Plumbing</td>
-                                    <td class="text-center font-semibold">£195</td>
-                                    <td class="text-center font-semibold">£230</td>
-                                    <td class="text-center font-semibold text-red-600">£375</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-5 font-medium">Heating &amp; Gas</td>
-                                    <td class="text-center font-semibold">£200</td>
-                                    <td class="text-center font-semibold">£235</td>
-                                    <td class="text-center font-semibold text-red-600">£375</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-5 font-medium">Drains</td>
-                                    <td class="text-center font-semibold">£210</td>
-                                    <td class="text-center font-semibold">£240</td>
-                                    <td class="text-center font-semibold text-red-600">£400</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-5 font-medium">Electrics</td>
-                                    <td class="text-center font-semibold">£165</td>
-                                    <td class="text-center font-semibold">£210</td>
-                                    <td class="text-center font-semibold text-red-600">£375</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-5 font-medium">Carpentry &amp; Building</td>
-                                    <td class="text-center font-semibold">£155</td>
-                                    <td class="text-center font-semibold">£195</td>
-                                    <td class="text-center font-semibold text-red-600">£350</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="bg-white rounded-3xl shadow-xl p-10 overflow-x-auto">
+                    <table class="w-full min-w-[800px]">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-left py-6 font-medium text-gray-500">Service</th>
+                                <th class="text-center py-6 font-medium text-gray-500">7am – 7pm</th>
+                                <th class="text-center py-6 font-medium text-gray-500">7pm – 12am</th>
+                                <th class="text-center py-6 font-medium text-gray-500">12am – 7am</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-lg">
+                            <tr><td class="py-5 font-medium">Plumbing</td><td class="text-center font-semibold">£195</td><td class="text-center font-semibold">£230</td><td class="text-center font-semibold text-red-600">£375</td></tr>
+                            <tr><td class="py-5 font-medium">Heating &amp; Gas</td><td class="text-center font-semibold">£200</td><td class="text-center font-semibold">£235</td><td class="text-center font-semibold text-red-600">£375</td></tr>
+                            <tr><td class="py-5 font-medium">Drains</td><td class="text-center font-semibold">£210</td><td class="text-center font-semibold">£240</td><td class="text-center font-semibold text-red-600">£400</td></tr>
+                            <tr><td class="py-5 font-medium">Electrics</td><td class="text-center font-semibold">£165</td><td class="text-center font-semibold">£210</td><td class="text-center font-semibold text-red-600">£375</td></tr>
+                            <tr><td class="py-5 font-medium">Carpentry &amp; Building</td><td class="text-center font-semibold">£155</td><td class="text-center font-semibold">£195</td><td class="text-center font-semibold text-red-600">£350</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -337,35 +301,24 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-amber-50 border border-amber-200 rounded-3xl p-10">
-                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
-                        <span class="text-4xl">📋</span> How We Charge
-                    </h3>
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3"><span class="text-4xl">📋</span> How We Charge</h3>
                     <ul class="space-y-5 text-gray-700">
                         <li class="flex gap-4"><i class="fas fa-check text-emerald-500 mt-1"></i> 1 hour minimum charge</li>
-                        <li class="flex gap-4"><i class="fas fa-check text-emerald-500 mt-1"></i> Then billed in 15 minute increments</li>
+                        <li class="flex gap-4"><i class="fas fa-check text-emerald-500 mt-1"></i> Billed in 15 minute increments after first hour</li>
                         <li class="flex gap-4"><i class="fas fa-check text-emerald-500 mt-1"></i> Transparent invoice with start/finish times</li>
                         <li class="flex gap-4"><i class="fas fa-check text-emerald-500 mt-1"></i> Materials at trade price + 30%</li>
                     </ul>
                 </div>
-               
                 <div class="bg-teal-50 border border-teal-200 rounded-3xl p-10">
-                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
-                        <span class="text-4xl">✅</span> Your Guarantee
-                    </h3>
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3"><span class="text-4xl">✅</span> Your Guarantee</h3>
                     <div class="space-y-6">
                         <div class="flex items-start gap-5">
                             <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center flex-shrink-0">🛠️</div>
-                            <div>
-                                <div class="font-semibold">12 Months Workmanship Guarantee</div>
-                                <div class="text-sm text-gray-600">On all labour</div>
-                            </div>
+                            <div><div class="font-semibold">12 Months Workmanship Guarantee</div><div class="text-sm text-gray-600">On all labour</div></div>
                         </div>
                         <div class="flex items-start gap-5">
                             <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center flex-shrink-0">🔥</div>
-                            <div>
-                                <div class="font-semibold">Up to 12 Years on Boilers</div>
-                                <div class="text-sm text-gray-600">Manufacturer dependent</div>
-                            </div>
+                            <div><div class="font-semibold">Up to 12 Years on Boilers</div><div class="text-sm text-gray-600">Manufacturer dependent</div></div>
                         </div>
                     </div>
                 </div>
@@ -382,15 +335,14 @@
                     <div class="uppercase tracking-[3px] text-sm font-bold opacity-90">Limited Time Offer</div>
                     <div class="text-4xl font-bold">10% OFF ALL SERVICES</div>
                 </div>
-                <a href="tel:07961618546"
-                   class="bg-white text-red-600 px-10 py-6 rounded-2xl font-bold text-xl hover:bg-amber-100 transition-all">
+                <a href="tel:07961618546" class="bg-white text-red-600 px-10 py-6 rounded-2xl font-bold text-xl hover:bg-amber-100 transition-all">
                     Claim Your Discount Now
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Contact / Get Quote -->
+    <!-- Contact Form -->
     <section id="contact" class="py-24 bg-gray-900 text-white">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-4">Need a Fixed Price Quote?</h2>
@@ -398,18 +350,14 @@
            
             <form id="quoteForm" class="space-y-8 bg-white/10 backdrop-blur-xl p-10 rounded-3xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" id="name" placeholder="Your Name"
-                           class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
-                    <input type="tel" id="phone" placeholder="Phone Number"
-                           class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
+                    <input type="text" id="name" placeholder="Your Name" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
+                    <input type="tel" id="phone" placeholder="Phone Number" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
                 </div>
-                <textarea id="message" rows="5" placeholder="Please describe the job (e.g. leaking kitchen tap, blocked toilet, new bathroom...)"
+                <textarea id="message" rows="5" placeholder="Please describe the job (e.g. leaking kitchen tap, blocked toilet...)" 
                           class="bg-white/10 border border-white/30 rounded-3xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white w-full"></textarea>
                
-                <button type="submit"
-                        class="w-full bg-[#0F766E] hover:bg-teal-700 transition-all py-7 rounded-3xl font-bold text-xl flex items-center justify-center gap-3">
-                    <i class="fas fa-paper-plane"></i>
-                    SEND REQUEST – GET QUOTE
+                <button type="submit" class="w-full bg-[#0F766E] hover:bg-teal-700 transition-all py-7 rounded-3xl font-bold text-xl flex items-center justify-center gap-3">
+                    <i class="fas fa-paper-plane"></i> SEND REQUEST – GET QUOTE
                 </button>
             </form>
         </div>
@@ -424,96 +372,31 @@
                         <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-10">
                         <span class="text-white text-2xl font-bold">Greenwich Plumbers</span>
                     </div>
-                    <p class="leading-relaxed">Serving Greenwich and all of Greater London 24 hours a day, 7 days a week.</p>
+                    <p>Serving Greenwich and all of Greater London 24 hours a day, 7 days a week.</p>
                 </div>
-               
                 <div>
                     <div class="font-semibold text-white mb-6">QUICK LINKS</div>
                     <div class="space-y-3">
-                        <a href="index.html" class="block hover:text-white">Home</a>
-                        <a href="index.html#services" class="block hover:text-white">Our Services</a>
+                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="block hover:text-white">Home</a>
+                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/#services" class="block hover:text-white">Our Services</a>
                         <a href="rates.html" class="block hover:text-white">Pricing</a>
-                        <a href="index.html#guarantees" class="block hover:text-white">Guarantees</a>
+                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/#guarantees" class="block hover:text-white">Guarantees</a>
                     </div>
                 </div>
-               
                 <div>
                     <div class="font-semibold text-white mb-6">24/7 EMERGENCY</div>
                     <a href="tel:07961618546" class="text-4xl font-bold text-white hover:text-teal-400 transition-colors block mb-4">07961 618 546</a>
-                    <a href="https://wa.me/447961618546" target="_blank"
-                       class="inline-flex items-center gap-3 text-green-400 hover:text-green-300">
+                    <a href="https://wa.me/447961618546" target="_blank" class="inline-flex items-center gap-3 text-green-400 hover:text-green-300">
                         <i class="fab fa-whatsapp text-3xl"></i>
                         <span>Message us instantly on WhatsApp</span>
                     </a>
                 </div>
             </div>
-           
             <div class="border-t border-gray-800 mt-16 pt-8 text-center text-sm">
                 <p>Greenwich Plumbers • NOT JUST LOCAL PLUMBERS • Serving Greenwich &amp; All of London – 24/7!!!</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20saw%20your%20rates%20page%20and%20need%20help!"
-       target="_blank"
-       class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-[60] text-3xl transition-all hover:scale-110">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Tawk.to Live Chat Widget -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function(){
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'hhttps://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';   
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-
-    <script>
-        // Tailwind already loaded via CDN
-
-        // Smooth scrolling for all internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-
-        // Scroll progress bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progress-bar").style.width = scrolled + "%";
-        });
-
-        // Fake form success message
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("✅ Thank you! We've received your quote request.\n\nA member of the Greenwich Plumbers team will call you back within 15 minutes.");
-            this.reset();
-        });
-
-        // Keyboard shortcut: press "/" to focus phone field
-        document.addEventListener('keydown', function(e) {
-            if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
-                document.getElementById('phone').focus();
-                e.preventDefault();
-            }
-        });
-
-        console.log('%c✅ Greenwich Plumbers Rates Page Loaded Successfully', 'color:#0F766E; font-size:13px; font-family:monospace');
-    </script>
-</body>
-</html>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20saw%20your%20rates%20page%
