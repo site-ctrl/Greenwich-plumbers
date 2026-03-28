@@ -56,7 +56,7 @@
             
             <!-- Menu Links -->
             <div class="hidden md:flex items-center gap-8 text-base font-medium">
-                <a href="#home" onclick="smoothScrollTo('services')" class="hover:text-teal-600 transition-colors">Home</a>
+                <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" class="hover:text-teal-600 transition-colors">Home</a>
                 <a href="#why-us" onclick="smoothScrollTo('why-us')" class="hover:text-teal-600 transition-colors">Why Us</a>
                   <a href="#services" onclick="smoothScrollTo('services')" class="hover:text-teal-600 transition-colors">Services</a>
                 <a href="rates/" class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">Rates</a>
@@ -121,8 +121,10 @@
         <i class="fas fa-star text-3xl"></i> 
         Checkatrade
     </a>
-</div>
-    
+            </div>
+        </div>
+    </div>
+</header>
 
     <!-- WHY US -->
     <section id="why-us" class="py-24 bg-gray-50">
