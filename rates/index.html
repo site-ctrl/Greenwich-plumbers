@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-      
+
         :root { --teal: #0F766E; }
         .tail-container { font-family: 'Inter', system_ui, sans-serif; }
-      
+
         .hero-bg {
             background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)),
                              url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-      
+
         .service-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -26,10 +27,8 @@
             transform: translateY(-12px);
             box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
         }
-      
-        .nav-link {
-            position: relative;
-        }
+
+        .nav-link { position: relative; }
         .nav-link:after {
             content: '';
             position: absolute;
@@ -41,39 +40,37 @@
             transition: all 0.3s ease;
         }
         .nav-link:hover:after { width: 100%; }
+
+        .bot-field { display: none !important; }
     </style>
 </head>
 <body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-    <!-- Sticky Navbar -->
+    <!-- NAVBAR — matches home page exactly -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          
-            <!-- Logo -->
-            <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="flex items-center">
-                <img src="logo.png"
+
+            <a href="../">
+                <img src="../logo.png"
                      alt="Greenwich Plumbers Logo"
                      class="h-28 w-auto transition-all hover:scale-105">
             </a>
-           
-            <!-- Menu Links -->
+
             <div class="hidden md:flex items-center gap-8 text-base font-medium">
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="nav-link hover:text-teal-600 transition-colors">Home</a>
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/#why-us" class="nav-link hover:text-teal-600 transition-colors">Why Us</a>
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/#services" class="nav-link hover:text-teal-600 transition-colors">Services</a>
-                <a href="rates.html" class="text-teal-600 font-semibold nav-link">Rates</a>
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/#guarantees" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
-                <a href="https://site-ctrl.github.io/Greenwich-plumbers/#contact" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
+                <a href="../" class="nav-link hover:text-teal-600 transition-colors">Home</a>
+                <a href="../#why-us" class="nav-link hover:text-teal-600 transition-colors">Why Us</a>
+                <a href="../#services" class="nav-link hover:text-teal-600 transition-colors">Services</a>
+                <a href="#" class="text-teal-600 font-semibold nav-link">Rates</a>
+                <a href="../#guarantees" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
+                <a href="../#contact" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
             </div>
 
-            <!-- Call Buttons -->
             <div class="flex items-center gap-4">
                 <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
                    target="_blank"
                    class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-              
                 <a href="tel:07961618546"
                    class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
                     <i class="fas fa-phone"></i>
@@ -83,59 +80,38 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-   <header class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
-    <!-- Background with your logo -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-         style="background-image: url('photo2.png'); 
-                filter: brightness(0.65) contrast(1.1);">
-    </div>
-    
-    <!-- Optional dark overlay for better text readability -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+    <!-- HERO — matches home page exactly -->
+    <header class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+             style="background-image: url('../photo2.png');
+                    filter: brightness(0.65) contrast(1.1);">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="max-w-2xl">
-            <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg mb-6">
-                <i class="fas fa-tags"></i> 10% OFF ALL SERVICES
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                London’s superior 24hr service company<br>will fix it!
-            </h1>
-            
-            <p class="text-2xl md:text-3xl font-light mb-10">In the meantime… pop the kettle on!</p>
-            
-            <div class="flex flex-wrap gap-4">
-                <a href="tel:07961618546" 
-                   class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
-                    <i class="fas fa-phone"></i> CALL NOW
-                </a>
-                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
-                   target="_blank" 
-                   class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
-                    <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
-                </a>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg mb-6">
+                    <i class="fas fa-tags"></i> 10% OFF ALL SERVICES
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+                    Transparent pricing.<br>No surprises.
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-10">In the meantime… pop the kettle on!</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="tel:07961618546"
+                       class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
+                        <i class="fas fa-phone"></i> CALL NOW
+                    </a>
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20saw%20your%20rates%20page%20and%20need%20help!"
+                       target="_blank"
+                       class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
+                        <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-
-    
-    <!-- Price box -->
-    <div class="hidden lg:block absolute bottom-12 right-12 bg-white text-[#0F766E] p-6 rounded-3xl shadow-2xl max-w-[240px]">
-        <div class="flex items-center gap-4">
-            <div>
-                <div class="font-semibold text-lg">All prices shown</div>
-                <div class="text-sm text-gray-600">+ VAT • 1hr minimum</div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-    
     <!-- Pricing Info Bar -->
     <div class="bg-white border-b py-6">
         <div class="max-w-7xl mx-auto px-6">
@@ -344,105 +320,83 @@
         </div>
     </div>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-24 bg-gray-900 text-white">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Need a Fixed Price Quote?</h2>
-            <p class="text-xl text-gray-300 mb-12">Tell us about your job and we’ll get straight back to you with a clear price.</p>
-          
-            <form id="quoteForm" class="space-y-8 bg-white/10 backdrop-blur-xl p-10 rounded-3xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" id="name" placeholder="Your Name" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
-                    <input type="tel" id="phone" placeholder="Phone Number" class="bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white">
-                </div>
-                <textarea id="message" rows="5" placeholder="Please describe the job (e.g. leaking kitchen tap, blocked toilet...)"
-                          class="bg-white/10 border border-white/30 rounded-3xl px-6 py-5 text-white placeholder-gray-400 focus:outline-none focus:border-white w-full"></textarea>
-              
-                <button type="submit" class="w-full bg-[#0F766E] hover:bg-teal-700 transition-all py-7 rounded-3xl font-bold text-xl flex items-center justify-center gap-3">
-                    <i class="fas fa-paper-plane"></i> SEND REQUEST – GET QUOTE
+    <!-- Contact / Quote Form — matches home page style, connected to Netlify Forms -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4">Need a Fixed Price Quote?</h2>
+            <p class="text-center text-gray-500 text-lg mb-10">Tell us about your job and we'll get straight back to you with a clear price.</p>
+
+            <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                  id="quoteForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-6">
+                <input type="hidden" name="form-name" value="quote">
+                <p class="bot-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+                <input name="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl">
+                <input name="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl">
+                <textarea name="message" rows="5" placeholder="Please describe the job (e.g. leaking kitchen tap, blocked toilet...)"
+                          class="w-full px-6 py-5 border rounded-3xl"></textarea>
+                <button type="submit"
+                        class="w-full bg-teal-700 text-white font-bold py-6 rounded-3xl text-xl">
+                    SEND REQUEST — GET QUOTE
                 </button>
             </form>
+            <div id="successMsg" style="display:none;" class="mt-6 bg-green-50 border-2 border-green-400 text-green-700 font-semibold text-center py-5 px-6 rounded-2xl">
+                ✅ Thank you! We've received your quote request. We'll call you back within 15 minutes. Pop the kettle on! ☕
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-gray-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-10">
-                        <span class="text-white text-2xl font-bold">Greenwich Plumbers</span>
-                    </div>
-                    <p>Serving Greenwich and all of Greater London 24 hours a day, 7 days a week.</p>
-                </div>
-                <div>
-                    <div class="font-semibold text-white mb-6">QUICK LINKS</div>
-                    <div class="space-y-3">
-                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/" class="block hover:text-white">Home</a>
-                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/#services" class="block hover:text-white">Our Services</a>
-                        <a href="rates.html" class="block hover:text-white">Pricing</a>
-                        <a href="https://site-ctrl.github.io/Greenwich-plumbers/#guarantees" class="block hover:text-white">Guarantees</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="font-semibold text-white mb-6">24/7 EMERGENCY</div>
-                    <a href="tel:07961618546" class="text-4xl font-bold text-white hover:text-teal-400 transition-colors block mb-4">07961 618 546</a>
-                    <a href="https://wa.me/447961618546" target="_blank" class="inline-flex items-center gap-3 text-green-400 hover:text-green-300">
-                        <i class="fab fa-whatsapp text-3xl"></i>
-                        <span>Message us instantly on WhatsApp</span>
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-sm">
-                <p>Greenwich Plumbers • NOT JUST LOCAL PLUMBERS • Serving Greenwich &amp; All of London – 24/7!!!</p>
-            </div>
+    <!-- FOOTER — matches home page exactly -->
+    <footer class="bg-teal-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold">Greenwich Plumbers</p>
+            <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300">07961 618 546</a>
+            <p class="mt-6">Serving Greenwich &amp; all of London – 24/7!!!</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
+    <!-- FLOATING WHATSAPP — matches home page exactly -->
     <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20saw%20your%20rates%20page%20and%20need%20help!"
        target="_blank"
-       class="fixed bottom-8 right-32 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-[60] text-3xl transition-all hover:scale-110">
+       class="fixed bottom-6 right-32 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60]">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
-
-
-
-
-    
-    <!-- Tawk.to Widget -->
+    <!-- TAWK.TO LIVE CHAT -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function(){
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
-            s1.src='https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';
+            s1.src = 'https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl';
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
+            s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
 
     <script>
-        // Smooth scroll helper
         function smoothScrollTo(sectionId) {
             const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Form success
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        // Netlify Forms AJAX submission
+        document.getElementById('quoteForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert("✅ Thank you! We've received your quote request.\n\nA member of the Greenwich Plumbers team will call you back within 15 minutes.");
-            this.reset();
+            const data = new FormData(this);
+            try {
+                await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(data).toString()
+                });
+                this.style.display = 'none';
+                document.getElementById('successMsg').style.display = 'block';
+            } catch (err) {
+                alert('Something went wrong. Please call us on 07961 618 546.');
+            }
         });
-
-        console.log('%c✅ Greenwich Plumbers Rates Page Loaded Successfully', 'color:#0F766E; font-size:13px; font-family:monospace');
     </script>
 </body>
 </html>
