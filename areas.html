@@ -66,25 +66,39 @@
     </nav>
 
     <!-- HERO -->
-    <header class="map-bg h-screen flex items-center text-white relative">
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-8 py-3 rounded-3xl font-bold text-lg mb-6">
-                <i class="fas fa-map-marker-alt"></i> SERVING GREENWICH &amp; ALL LONDON
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                Areas We Cover
-            </h1>
-            <p class="text-2xl md:text-3xl font-light max-w-2xl mx-auto">
-                24/7 emergency plumbing &amp; multi-trade services across the Royal Borough of Greenwich and surrounding London areas
-            </p>
-            <div class="mt-10">
-                <a href="tel:07961618546" 
-                   class="inline-flex items-center gap-3 bg-white text-teal-800 font-bold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all">
-                    <i class="fas fa-phone"></i> CALL 07961 618 546
-                </a>
-            </div>
+   <!-- HERO SECTION - YOUR OWN BACKGROUND IMAGE -->
+<header class="relative h-screen flex items-center text-white overflow-hidden">
+
+    <!-- Background Image - CHANGE THIS TO YOUR PHOTO -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+         style="background-image: url('photo2.png');">
+        
+        <!-- Dark teal overlay so text is readable -->
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/85 via-teal-900/75 to-black/60"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-8 py-3 rounded-3xl font-bold text-lg mb-6">
+            <i class="fas fa-map-marker-alt"></i> SERVING GREENWICH &amp; ALL LONDON
         </div>
-    </header>
+        
+        <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+            Areas We Cover
+        </h1>
+        
+        <p class="text-2xl md:text-3xl font-light max-w-2xl mx-auto">
+            24/7 emergency plumbing &amp; multi-trade services across the Royal Borough of Greenwich and surrounding London areas
+        </p>
+        
+        <div class="mt-10">
+            <a href="tel:07961618546"
+               class="inline-flex items-center gap-3 bg-white text-teal-800 font-bold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all">
+                <i class="fas fa-phone"></i> CALL 07961 618 546
+            </a>
+        </div>
+    </div>
+</header>
 
     <!-- AREAS SECTION -->
     <section class="py-24 bg-white">
