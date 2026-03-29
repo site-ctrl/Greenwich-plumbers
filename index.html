@@ -8,40 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-       
         :root { --teal: #0F766E; }
         .tail-container { font-family: 'Inter', system_ui, sans-serif; }
-       
         .hero-bg {
             background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)),
                              url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-       
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
-        }
-       
-        .nav-link {
-            position: relative;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #0F766E;
-            transition: all 0.3s ease;
-        }
+        .service-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25); }
+        .nav-link { position: relative; }
+        .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #0F766E; transition: all 0.3s ease; }
         .nav-link:hover:after { width: 100%; }
-
         .bot-field { display: none !important; }
     </style>
 </head>
@@ -55,14 +34,12 @@
                 <a href="#home" onclick="smoothScrollTo('home')" class="hover:text-teal-600 transition-colors">Home</a>
                 <a href="#why-us" onclick="smoothScrollTo('why-us')" class="hover:text-teal-600 transition-colors">Why Us</a>
                 <a href="#services" onclick="smoothScrollTo('services')" class="hover:text-teal-600 transition-colors">Services</a>
-                <a href="pricing/" class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">pricing<
-</a>
+                <a href="pricing/" class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">Pricing</a>
                 <a href="#guarantees" onclick="smoothScrollTo('guarantees')" class="hover:text-teal-600 transition-colors">Guarantees</a>
                 <a href="#contact" onclick="smoothScrollTo('contact')" class="hover:text-teal-600 transition-colors">Contact</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
-                   target="_blank"
+                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
                    class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
@@ -78,8 +55,7 @@
     <!-- HERO -->
     <header id="home" class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-             style="background-image: url('photo2.png'); filter: brightness(0.65) contrast(1.1);">
-        </div>
+             style="background-image: url('photo2.png'); filter: brightness(0.65) contrast(1.1);"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-2xl">
@@ -89,19 +65,17 @@
                 <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
                     London's superior 24hr service company<br>will fix it!
                 </h1>
-                <p class="text-2xl md:text-3xl font-light mb-10">In the meantime… pop the kettle on!</p>
+                <p class="text-2xl md:text-3xl font-light mb-10">In the meantime... pop the kettle on!</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="tel:07961618546" 
+                    <a href="tel:07961618546"
                        class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
                         <i class="fas fa-phone"></i> CALL NOW
                     </a>
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
-                       target="_blank" 
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
                        class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
                         <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
                     </a>
-                    <a href="https://www.checkatrade.com/trades/roserveplumbers" 
-                       target="_blank"
+                    <a href="https://www.checkatrade.com/trades/roserveplumbers" target="_blank"
                        class="bg-blue-600 text-white font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
                         <i class="fas fa-star text-3xl"></i> Checkatrade
                     </a>
@@ -198,16 +172,15 @@
                   id="contactForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-6">
                 <input type="hidden" name="form-name" value="contact">
                 <p class="bot-field"><label>Don't fill this out: <input name="bot-field"></label></p>
-                <input name="name" id="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl">
-                <input name="phone" id="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl">
-                <textarea name="message" id="message" rows="4" placeholder="Brief description of the problem..." class="w-full px-6 py-5 border rounded-3xl"></textarea>
-                <button type="submit"
-                        class="w-full bg-teal-700 text-white font-bold py-6 rounded-3xl text-xl">
-                    SEND MESSAGE — WE'LL CALL YOU BACK FAST
+                <input name="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl">
+                <input name="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl">
+                <textarea name="message" rows="4" placeholder="Brief description of the problem..." class="w-full px-6 py-5 border rounded-3xl"></textarea>
+                <button type="submit" class="w-full bg-teal-700 text-white font-bold py-6 rounded-3xl text-xl">
+                    SEND MESSAGE - WE'LL CALL YOU BACK FAST
                 </button>
             </form>
             <div id="successMsg" style="display:none;" class="mt-6 bg-green-50 border-2 border-green-400 text-green-700 font-semibold text-center py-5 px-6 rounded-2xl">
-                ✅ Thank you! Our team will call you back within minutes. Pop the kettle on! ☕
+                Thank you! Our team will call you back within minutes. Pop the kettle on!
             </div>
         </div>
     </section>
@@ -217,13 +190,12 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-3xl font-bold">Greenwich Plumbers</p>
             <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300">07961 618 546</a>
-            <p class="mt-6">Serving Greenwich &amp; all of London – 24/7!!!</p>
+            <p class="mt-6">Serving Greenwich &amp; all of London - 24/7!!!</p>
         </div>
     </footer>
 
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
-       target="_blank"
+    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
        class="fixed bottom-6 right-32 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60]">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -244,25 +216,16 @@
     <script>
         function smoothScrollTo(sectionId) {
             const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
         }
-
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const data = new FormData(this);
             try {
-                await fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(data).toString()
-                });
+                await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
                 this.style.display = 'none';
                 document.getElementById('successMsg').style.display = 'block';
-            } catch (err) {
-                alert('Something went wrong. Please call us on 07961 618 546.');
-            }
+            } catch (err) { alert('Something went wrong. Please call us on 07961 618 546.'); }
         });
     </script>
 </body>
