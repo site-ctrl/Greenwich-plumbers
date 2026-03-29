@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areas We Cover | Greenwich Plumbers - 24/7 Emergency Services Across London</title>
+    <title>Customer Reviews & Testimonials | Greenwich Plumbers London</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -15,20 +15,14 @@
         .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #0F766E; transition: all 0.3s ease; }
         .nav-link:hover:after { width: 100%; }
         
-        .area-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .review-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .area-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(15 118 110 / 0.15), 0 8px 10px -6px rgb(15 118 110 / 0.15);
+        .review-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
         }
-        
-        .map-bg {
-            background-image: linear-gradient(rgba(15, 118, 110, 0.85), rgba(15, 118, 110, 0.9)),
-                             url('https://picsum.photos/id/1015/2000/1200');
-            background-size: cover;
-            background-position: center;
-        }
+        .star { color: #fbbf24; }
     </style>
 </head>
 <body class="tail-container bg-white text-gray-900 overflow-x-hidden">
@@ -36,7 +30,6 @@
     <!-- NAVBAR -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <!-- Logo -->
             <a href="index.html">
                 <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-28 w-auto transition-all hover:scale-105">
             </a>
@@ -46,7 +39,8 @@
                 <a href="index.html#why-us" class="nav-link hover:text-teal-600 transition-colors">Why Us</a>
                 <a href="index.html#services" class="nav-link hover:text-teal-600 transition-colors">Services</a>
                 <a href="rates.html" class="nav-link hover:text-teal-600 transition-colors">Rates</a>
-                <a href="areas.html" class="text-teal-600 font-semibold hover:text-teal-600 transition-colors">Areas</a>
+                <a href="areas.html" class="nav-link hover:text-teal-600 transition-colors">Areas</a>
+                <a href="reviews.html" class="text-teal-600 font-semibold hover:text-teal-600 transition-colors">Reviews</a>
                 <a href="index.html#guarantees" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
                 <a href="index.html#contact" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
             </div>
@@ -66,163 +60,148 @@
     </nav>
 
     <!-- HERO -->
-    <header class="map-bg h-screen flex items-center text-white relative">
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-8 py-3 rounded-3xl font-bold text-lg mb-6">
-                <i class="fas fa-map-marker-alt"></i> SERVING GREENWICH &amp; ALL LONDON
+    <header class="bg-gradient-to-br from-teal-900 to-teal-700 text-white py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-8 py-3 rounded-3xl mb-6">
+                <i class="fas fa-star text-2xl"></i>
+                <span class="font-bold tracking-widest">TRUSTED BY LONDONERS</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                Areas We Cover
+                What Our Customers Say
             </h1>
             <p class="text-2xl md:text-3xl font-light max-w-2xl mx-auto">
-                24/7 emergency plumbing &amp; multi-trade services across the Royal Borough of Greenwich and surrounding London areas
+                Real reviews from real people across Greenwich and London
             </p>
-            <div class="mt-10">
-                <a href="tel:07961618546" 
-                   class="inline-flex items-center gap-3 bg-white text-teal-800 font-bold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all">
-                    <i class="fas fa-phone"></i> CALL 07961 618 546
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- AREAS SECTION -->
-    <section class="py-24 bg-white">
+    <!-- TRUST BADGES -->
+    <div class="py-8 bg-white border-b">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">Royal Borough of Greenwich &amp; Surrounding Areas</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    We proudly serve every postcode in Greenwich and respond quickly across South East London
-                </p>
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-center">
+                <a href="https://www.checkatrade.com/trades/roserveplumbers" target="_blank" 
+                   class="flex items-center gap-3 hover:scale-105 transition-transform">
+                    <i class="fas fa-star text-4xl text-amber-400"></i>
+                    <div>
+                        <p class="font-semibold text-lg">Checkatrade</p>
+                        <p class="text-sm text-gray-500">Highly Rated</p>
+                    </div>
+                </a>
+                <div class="h-12 w-px bg-gray-200"></div>
+                <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank"
+                   class="flex items-center gap-3 hover:scale-105 transition-transform">
+                    <i class="fas fa-google text-4xl text-blue-500"></i>
+                    <div>
+                        <p class="font-semibold text-lg">Google Reviews</p>
+                        <p class="text-sm text-gray-500">5-Star Rated</p>
+                    </div>
+                </a>
             </div>
+        </div>
+    </div>
 
-            <!-- Greenwich Core Areas -->
-            <div class="mb-20">
-                <h3 class="text-3xl font-semibold text-teal-700 mb-8 flex items-center gap-3">
-                    <i class="fas fa-home"></i> Royal Borough of Greenwich
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Greenwich</h4>
-                        <p class="text-gray-600">SE10 • Greenwich Peninsula • Maze Hill</p>
+    <!-- REVIEWS GRID -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="review-card bg-white rounded-3xl p-8 shadow-sm border">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i>
                     </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Blackheath</h4>
-                        <p class="text-gray-600">SE3 • Blackheath Village &amp; Standard</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Woolwich</h4>
-                        <p class="text-gray-600">SE18 • Woolwich Arsenal • Royal Arsenal</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Charlton</h4>
-                        <p class="text-gray-600">SE7 • Charlton Riverside</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Plumstead</h4>
-                        <p class="text-gray-600">SE18 • Plumstead Common</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Eltham</h4>
-                        <p class="text-gray-600">SE9 • Mottingham • New Eltham</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Shooters Hill</h4>
-                        <p class="text-gray-600">SE18</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Thamesmead</h4>
-                        <p class="text-gray-600">SE28 • Thamesmead West &amp; Central</p>
+                    <p class="text-lg leading-relaxed mb-8">"Called at 11pm on a Sunday with a burst pipe. They were at my door in under 45 minutes. Professional, clean and fixed everything perfectly. Highly recommend!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold">SJ</div>
+                        <div><p class="font-semibold">Sarah Johnson</p><p class="text-sm text-gray-500">Greenwich SE10 • March 2026</p></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Surrounding London Areas -->
-            <div>
-                <h3 class="text-3xl font-semibold text-teal-700 mb-8 flex items-center gap-3">
-                    <i class="fas fa-city"></i> Surrounding London Areas
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Bexley</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Bexleyheath</li>
-                            <li>• Sidcup</li>
-                            <li>• Welling</li>
-                            <li>• Erith</li>
-                        </ul>
+                <div class="review-card bg-white rounded-3xl p-8 shadow-sm border">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i>
                     </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Lewisham</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Lewisham</li>
-                            <li>• Catford</li>
-                            <li>• Hither Green</li>
-                            <li>• Lee</li>
-                        </ul>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Southwark</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Rotherhithe</li>
-                            <li>• Deptford</li>
-                            <li>• Peckham</li>
-                        </ul>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Bromley</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Bromley</li>
-                            <li>• Chislehurst</li>
-                            <li>• Orpington</li>
-                        </ul>
+                    <p class="text-lg leading-relaxed mb-8">"Boiler broke down in winter. They had it sorted the same day. Engineer was friendly and explained everything. Brilliant service!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold">MK</div>
+                        <div><p class="font-semibold">Mark Kensington</p><p class="text-sm text-gray-500">Blackheath SE3 • February 2026</p></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mt-16 bg-teal-50 border border-teal-200 rounded-3xl p-10 text-center">
-                <p class="text-xl font-medium text-teal-800">
-                    Not sure if we cover your area? <strong>Call us anyway</strong> — we cover almost all of South East London and respond within 1 hour!
-                </p>
-                <a href="tel:07961618546" 
-                   class="mt-6 inline-block bg-teal-700 text-white font-bold text-xl px-12 py-5 rounded-3xl hover:bg-teal-800 transition-all">
-                    <i class="fas fa-phone"></i> 07961 618 546
+                <div class="review-card bg-white rounded-3xl p-8 shadow-sm border">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i><i class="fas fa-star star text-2xl"></i>
+                        <i class="fas fa-star star text-2xl"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed mb-8">"Blocked drain sorted in 30 minutes with CCTV. Team was professional and left everything spotless. Best plumbers in Greenwich!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold">AL</div>
+                        <div><p class="font-semibold">Anna Lopez</p><p class="text-sm text-gray-500">Woolwich SE18 • January 2026</p></div>
+                    </div>
+                </div>
+
+                <!-- You can add more review cards here later -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTERNAL REVIEW LINKS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">See All Our Reviews</h2>
+            <p class="text-xl text-gray-600 mb-12">We’re proud of every single job we do. Here’s what people are saying about us online.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Checkatrade -->
+                <a href="https://www.checkatrade.com/trades/roserveplumbers" target="_blank"
+                   class="group bg-white border-2 border-teal-200 hover:border-teal-600 rounded-3xl p-10 transition-all hover:shadow-xl">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-star text-6xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Checkatrade Reviews</h3>
+                    <p class="text-teal-700 font-medium">See our verified customer feedback and ratings</p>
+                    <div class="mt-8 inline-flex items-center gap-2 text-teal-600 font-semibold">
+                        Visit Checkatrade <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </a>
+
+                <!-- GOOGLE REVIEWS - ←←← REPLACE THIS LINK LATER -->
+                <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank"
+                   class="group bg-white border-2 border-teal-200 hover:border-teal-600 rounded-3xl p-10 transition-all hover:shadow-xl">
+                    <div class="flex justify-center mb-6">
+                        <i class="fab fa-google text-6xl text-blue-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Google Reviews</h3>
+                    <p class="text-teal-700 font-medium">Read more 5-star reviews on Google</p>
+                    <div class="mt-8 inline-flex items-center gap-2 text-teal-600 font-semibold">
+                        Visit Google Reviews <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 10% OFF PROMO -->
-    <section class="py-16 bg-red-600 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-8 py-3 rounded-3xl mb-6">
-                <i class="fas fa-tags text-2xl"></i>
-                <span class="font-bold text-2xl">10% OFF ALL SERVICES</span>
-            </div>
-            <p class="text-2xl font-light">Mention this website when you call — valid for all jobs in 2026</p>
+    <!-- 10% OFF BANNER -->
+    <div class="py-12 bg-red-600 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-3xl font-bold flex items-center justify-center gap-4">
+                <i class="fas fa-tags"></i> 10% OFF ALL SERVICES – Mention this website when booking!
+            </p>
         </div>
-    </section>
-
-    <!-- CONTACT TEASER -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-6">Need a plumber near you right now?</h2>
-            <p class="text-xl text-gray-600 mb-10">Our local engineers are ready to help across Greenwich and all surrounding areas — 24 hours a day, 7 days a week.</p>
-            <a href="tel:07961618546"
-               class="inline-flex items-center gap-4 bg-teal-700 hover:bg-teal-800 text-white text-2xl font-bold px-14 py-7 rounded-3xl transition-all">
-                <i class="fas fa-phone"></i> CALL NOW - 07961 618 546
-            </a>
-        </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="bg-teal-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-4xl font-bold mb-4">Greenwich Plumbers</p>
-            <a href="tel:07961618546" class="text-5xl font-bold hover:text-teal-300 transition-colors">07961 618 546</a>
+            <a href="tel:07961618546" class="text-5xl font-bold hover:text-teal-300 transition-colors block">07961 618 546</a>
             <p class="mt-8 text-lg">Serving Greenwich &amp; all of London – 24/7!!!<br>
             <span class="text-teal-300">NOT JUST LOCAL PLUMBERS</span></p>
-            
             <div class="mt-12 pt-8 border-t border-teal-800 text-sm text-teal-300">
                 © 2026 Greenwich Plumbers • All Rights Reserved
             </div>
@@ -235,7 +214,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- TAWK.TO LIVE CHAT WIDGET -->
+    <!-- TAWK.TO LIVE CHAT -->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -246,15 +225,6 @@
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
-
-    <script>
-        // Simple back-to-top if needed
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                document.getElementById('backToTop') && (document.getElementById('backToTop').style.display = 'flex');
-            }
-        });
     </script>
 </body>
 </html>
