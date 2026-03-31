@@ -55,15 +55,9 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Tawk.to flash animation */
-        .tawk-flash {
-            animation: tawkFlash 4s ease-in-out 2s forwards;
-        }
-
-        @keyframes tawkFlash {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
+        /* Floating widgets - positioned firmly below footer */
+        .floating-whatsapp {
+            z-index: 60;
         }
 
         .bot-field { display: none !important; }
@@ -174,6 +168,9 @@
         </div>
     </header>
 
+    <!-- WHY US, SERVICES, GUARANTEES, CONTACT sections remain unchanged -->
+    <!-- (omitted for brevity - same as previous version) -->
+
     <!-- WHY US -->
     <section id="why-us" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
@@ -278,21 +275,24 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-teal-900 text-white py-12">
+    <footer class="bg-teal-900 text-white py-16 relative">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-3xl font-bold">Greenwich Plumbers</p>
             <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300 transition-colors">07961 618 546</a>
             <p class="mt-6 text-lg">Serving Greenwich &amp; all of London - 24/7!!!<br>
             <span class="text-teal-300">NOT JUST LOCAL PLUMBERS</span></p>
         </div>
-    </footer>
 
-    <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
-       target="_blank"
-       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60] hover:scale-110 transition-transform">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <!-- Widgets positioned firmly below footer content -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 pb-6 md:pb-8">
+            <!-- WhatsApp Widget -->
+            <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
+               target="_blank"
+               class="floating-whatsapp bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl hover:scale-110 transition-transform">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
 
     <!-- TAWK.TO LIVE CHAT -->
     <script type="text/javascript">
@@ -308,8 +308,6 @@
     </script>
 
     <script>
-        // Tailwind script already loaded via CDN
-
         function smoothScrollTo(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) {
@@ -341,12 +339,9 @@
             mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
         }
 
-        // Close mobile menu when clicking a link (for smooth scroll pages)
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    setTimeout(closeMobileMenu, 300);
-                }
+                if (window.innerWidth < 768) setTimeout(closeMobileMenu, 300);
             });
         });
 
@@ -354,41 +349,30 @@
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const data = new FormData(this);
-            
             try {
                 await fetch('/', { 
                     method: 'POST', 
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
                     body: new URLSearchParams(data).toString() 
                 });
-                
                 this.style.display = 'none';
                 document.getElementById('successMsg').style.display = 'block';
-                
-                // Scroll to success message
-                setTimeout(() => {
-                    document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth' });
-                }, 100);
+                setTimeout(() => document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth' }), 100);
             } catch (err) {
                 alert('Something went wrong. Please call us directly on 07961 618 546.');
             }
         });
 
-        // Tawk.to auto-minimize after flashing (makes widget appear then hide)
+        // Tawk.to - flashes up then disappears
         window.addEventListener('load', () => {
-            // Give Tawk.to time to load
             setTimeout(() => {
                 if (typeof Tawk_API !== 'undefined') {
-                    // Flash the widget briefly then minimize
                     Tawk_API.showWidget();
-                    setTimeout(() => {
-                        Tawk_API.minimize();
-                    }, 4500);
+                    setTimeout(() => Tawk_API.minimize(), 4500);
                 }
             }, 2500);
         });
 
-        // Keyboard escape support for mobile menu
         document.addEventListener('keydown', (e) => {
             if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) {
                 closeMobileMenu();
