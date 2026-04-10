@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9B9WJZG7KL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9B9WJZG7KL');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B9WJZG7KL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9B9WJZG7KL');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areas We Cover | Greenwich Plumbers - 24/7 Emergency Services Across London</title>
+    <title>Areas We Cover | Greenwich Plumbers - 24/7 Across London</title>
+    <meta name="description" content="Greenwich Plumbers serve all of London 24/7. Fast response in Greenwich, Blackheath, Deptford, Woolwich, Lewisham, Canary Wharf and surrounding areas.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -21,168 +21,273 @@
         .tail-container { font-family: 'Inter', system_ui, sans-serif; }
         
         .nav-link { position: relative; }
-        .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #0F766E; transition: all 0.3s ease; }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0F766E;
+            transition: all 0.3s ease;
+        }
         .nav-link:hover:after { width: 100%; }
-        
         .area-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .area-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(15 118 110 / 0.15), 0 8px 10px -6px rgb(15 118 110 / 0.15);
+            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
         }
-        
-        .map-bg {
-            background-image: linear-gradient(rgba(15, 118, 110, 0.85), rgba(15, 118, 110, 0.9)),
-                             url('https://picsum.photos/id/1015/2000/1200');
-            background-size: cover;
-            background-position: center;
-        }
+        .bot-field { display: none !important; }
     </style>
 </head>
 <body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR - Exact match to homepage & rates -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <!-- Logo -->
             <a href="index.html">
-                <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-28 w-auto transition-all hover:scale-105">
+                <img src="logo.png" alt="Greenwich Plumbers Logo" class="h-20 md:h-28 w-auto transition-all hover:scale-105">
             </a>
             
             <div class="hidden md:flex items-center gap-8 text-base font-medium">
-                <a href="index.html" class="nav-link hover:text-teal-600 transition-colors">Home</a>
+                <a href="index.html#home" class="nav-link hover:text-teal-600 transition-colors">Home</a>
                 <a href="index.html#why-us" class="nav-link hover:text-teal-600 transition-colors">Why Us</a>
                 <a href="index.html#services" class="nav-link hover:text-teal-600 transition-colors">Services</a>
                 <a href="rates.html" class="nav-link hover:text-teal-600 transition-colors">Rates</a>
-                <a href="areas.html" class="text-teal-600 font-semibold hover:text-teal-600 transition-colors">Areas</a>
+                <a href="areas.html" class="nav-link text-teal-600 font-semibold">Areas</a>
+                <a href="reviews.html" class="nav-link hover:text-teal-600 transition-colors">Reviews</a>
                 <a href="index.html#guarantees" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
                 <a href="index.html#contact" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
+                <a href="booking.html" class="bg-teal-700 hover:bg-teal-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
+                    <i class="fas fa-calendar-check mr-1"></i> Book Now
+                </a>
             </div>
 
-            <div class="flex items-center gap-4">
+            <div class="hidden md:flex items-center gap-4">
                 <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
-                   class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
+                   class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
                 <a href="tel:07961618546"
                    class="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md transition-all">
                     <i class="fas fa-phone"></i>
-                    <span class="hidden sm:inline">07961 618 546</span>
+                    <span>07961 618 546</span>
                 </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-button" class="md:hidden text-3xl text-teal-700 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+                <a href="index.html#home" onclick="closeMobileMenu()" class="hover:text-teal-600">Home</a>
+                <a href="index.html#why-us" onclick="closeMobileMenu()" class="hover:text-teal-600">Why Us</a>
+                <a href="index.html#services" onclick="closeMobileMenu()" class="hover:text-teal-600">Services</a>
+                <a href="rates.html" onclick="closeMobileMenu()" class="hover:text-teal-600">Rates</a>
+                <a href="areas.html" onclick="closeMobileMenu()" class="hover:text-teal-600">Areas</a>
+                <a href="reviews.html" onclick="closeMobileMenu()" class="hover:text-teal-600">Reviews</a>
+                <a href="index.html#guarantees" onclick="closeMobileMenu()" class="hover:text-teal-600">Guarantees</a>
+                <a href="index.html#contact" onclick="closeMobileMenu()" class="hover:text-teal-600">Contact</a>
+                
+                <div class="pt-6 border-t flex flex-col gap-4">
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
+                       class="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white py-4 rounded-2xl font-semibold">
+                        <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
+                    </a>
+                    <a href="tel:07961618546"
+                       class="flex items-center justify-center gap-3 bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-2xl font-semibold">
+                        <i class="fas fa-phone text-2xl"></i> Call 07961 618 546
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-
     <!-- HERO -->
-   <!-- HERO SECTION - YOUR OWN BACKGROUND IMAGE -->
-<header class="relative h-screen flex items-center text-white overflow-hidden">
-
-      <!-- Background Image - CHANGE THIS TO YOUR PHOTO -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-         style="background-image: url('photo2.png'); filter: brightness(0.65) contrast(1.1);"></div>
-        
-        <!-- Dark teal overlay so text is readable -->
+    <header class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+             style="background-image: url('photo2.png'); filter: brightness(0.65) contrast(1.1);"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-    </div>
-
-
-    <!-- Content -->
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-        <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-8 py-3 rounded-3xl font-bold text-lg mb-6">
-            <i class="fas fa-map-marker-alt"></i> SERVING GREENWICH &amp; ALL LONDON
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg mb-6">
+                    <i class="fas fa-map-marker-alt"></i> SERVING ALL OF LONDON
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+                    Fast response across<br>Greenwich &amp; Greater London
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-10">1-hour average response • 24/7 • No call centres</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="tel:07961618546"
+                       class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all active:scale-95">
+                        <i class="fas fa-phone"></i> CALL NOW
+                    </a>
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
+                       class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all active:scale-95">
+                        <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
-        
-        <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-            Areas We Cover
-        </h1>
-        
-        <p class="text-2xl md:text-3xl font-light max-w-2xl mx-auto">
-            24/7 emergency plumbing &amp; multi-trade services across the Royal Borough of Greenwich and surrounding London areas
-        </p>
-        
-        <div class="mt-10">
-            <a href="tel:07961618546"
-               class="inline-flex items-center gap-3 bg-white text-teal-800 font-bold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all">
-                <i class="fas fa-phone"></i> CALL 07961 618 546
-            </a>
-        </div>
-    </div>
-</header>
+    </header>
 
-    <!-- AREAS SECTION -->
-    <section class="py-24 bg-white">
+    <!-- AREAS GRID -->
+    <section class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">Royal Borough of Greenwich &amp; Surrounding Areas</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    We proudly serve every postcode in Greenwich and respond quickly across South East London
-                </p>
+                <h2 class="text-5xl font-bold mb-4">Areas We Cover</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We provide fast 24/7 emergency plumbing and multi-trade services across Greenwich and all of London.</p>
             </div>
-
-            <!-- Greenwich Core Areas -->
-            <div class="mb-20">
-                <h3 class="text-3xl font-semibold text-teal-700 mb-8 flex items-center gap-3">
-                    <i class="fas fa-home"></i> Royal Borough of Greenwich
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Greenwich</h4>
-                        <p class="text-gray-600">SE10 • Greenwich Peninsula • Maze Hill</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Blackheath</h4>
-                        <p class="text-gray-600">SE3 • Blackheath Village &amp; Standard</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Woolwich</h4>
-                        <p class="text-gray-600">SE18 • Woolwich Arsenal • Royal Arsenal</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Charlton</h4>
-                        <p class="text-gray-600">SE7 • Charlton Riverside</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Plumstead</h4>
-                        <p class="text-gray-600">SE18 • Plumstead Common</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Eltham</h4>
-                        <p class="text-gray-600">SE9 • Mottingham • New Eltham</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Shooters Hill</h4>
-                        <p class="text-gray-600">SE18</p>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-2">Thamesmead</h4>
-                        <p class="text-gray-600">SE28 • Thamesmead West &amp; Central</p>
-                    </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Area Cards -->
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Greenwich</h3>
+                    <p class="text-gray-600">Greenwich Peninsula, Greenwich Town Centre, Maze Hill, Blackheath</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Deptford &amp; New Cross</h3>
+                    <p class="text-gray-600">Deptford High Street, New Cross Gate, Brockley</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Woolwich &amp; Plumstead</h3>
+                    <p class="text-gray-600">Woolwich Arsenal, Plumstead, Shooters Hill</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Lewisham &amp; Catford</h3>
+                    <p class="text-gray-600">Lewisham Centre, Catford, Hither Green</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Canary Wharf &amp; Isle of Dogs</h3>
+                    <p class="text-gray-600">Canary Wharf, Cubitt Town, Millwall</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Bexley &amp; Sidcup</h3>
+                    <p class="text-gray-600">Bexleyheath, Sidcup, Welling</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">South East London</h3>
+                    <p class="text-gray-600">SE1 to SE28 • All postcodes covered</p>
+                </div>
+                <div class="area-card bg-white border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Central &amp; North London</h3>
+                    <p class="text-gray-600">Quick response for urgent jobs across London</p>
                 </div>
             </div>
 
-            <!-- Surrounding London Areas -->
-            <div>
-                <h3 class="text-3xl font-semibold text-teal-700 mb-8 flex items-center gap-3">
-                    <i class="fas fa-city"></i> Surrounding London Areas
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Bexley</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Bexleyheath</li>
-                            <li>• Sidcup</li>
-                            <li>• Welling</li>
-                            <li>• Erith</li>
-                        </ul>
-                    </div>
-                    <div class="area-card bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
-                        <h4 class="font-semibold text-xl mb-3">Lewisham</h4>
-                        <ul class="space-y-1 text-gray-600 text-sm">
-                            <li>• Lewisham</li>
-                            <li>• Catford</li>
-                            <li>• Hither Green</li>
-                            <li>• Lee</li>
-                        </ul>
+            <div class="mt-16 text-center">
+                <p class="text-2xl font-medium text-gray-700">Not sure if we cover your area?</p>
+                <a href="tel:07961618546" class="inline-block mt-6 bg-teal-700 hover:bg-teal-800 text-white px-10 py-5 rounded-3xl font-bold text-xl transition-all">
+                    Call us now – we’ll let you know instantly
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10% OFF BANNER -->
+    <div class="bg-gradient-to-r from-red-600 to-rose-600 py-8 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <div class="text-5xl">🎉</div>
+                <div><div class="uppercase tracking-[3px] text-sm font-bold opacity-90">Limited Time Offer</div><div class="text-4xl font-bold">10% OFF ALL SERVICES</div></div>
+                <a href="tel:07961618546" class="bg-white text-red-600 px-10 py-6 rounded-2xl font-bold text-xl hover:bg-amber-100 transition-all">Claim Your Discount Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4">Need Help in Your Area?</h2>
+            <p class="text-center text-gray-500 text-lg mb-10">Tell us your location and the problem – we’ll give you a fast response time and clear quote.</p>
+            <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-6">
+                <input type="hidden" name="form-name" value="quote">
+                <p class="bot-field"><label>Do not fill this out: <input name="bot-field"></label></p>
+                <input name="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl focus:outline-none focus:border-teal-600">
+                <input name="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl focus:outline-none focus:border-teal-600">
+                <textarea name="message" rows="5" placeholder="Your postcode and brief description of the job..." class="w-full px-6 py-5 border rounded-3xl focus:outline-none focus:border-teal-600"></textarea>
+                <button type="submit" class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-6 rounded-3xl text-xl transition-all">SEND REQUEST - GET QUOTE</button>
+            </form>
+            <div id="successMsg" style="display:none;" class="mt-6 bg-green-50 border-2 border-green-400 text-green-700 font-semibold text-center py-5 px-6 rounded-2xl">
+                Thank you! We will call you back within 15 minutes. Pop the kettle on!
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-teal-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold">Greenwich Plumbers</p>
+            <a href="tel:07961618546" class="text-4xl font-bold block mt-4 hover:text-teal-300 transition-colors">07961 618 546</a>
+            <p class="mt-6 text-lg">Serving Greenwich &amp; all of London - 24/7!!!<br>
+            <span class="text-teal-300">NOT JUST LOCAL PLUMBERS</span></p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP - Moved to right-32 as requested -->
+    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" target="_blank"
+       class="fixed bottom-6 right-32 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl text-4xl z-[60] hover:scale-110 transition-transform">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- TAWK.TO -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src="https://embed.tawk.to/69c2aea5fb7ce31c36765265/1jkg7kedl";
+            s1.charset="UTF-8";
+            s1.setAttribute("crossorigin","*");
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+    <!-- Mobile Menu & Form Scripts -->
+    <script>
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+
+        // Contact Form
+        document.getElementById("quoteForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const data = new FormData(this);
+            try {
+                await fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(data).toString()
+                });
+                this.style.display = "none";
+                document.getElementById("successMsg").style.display = "block";
+            } catch(err) {
+                alert("Something went wrong. Please call us on 07961 618 546.");
+            }
+        });
+    </script>
+</body>
+</html>
                    
