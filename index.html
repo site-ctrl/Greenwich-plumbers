@@ -16,51 +16,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-        
+       
         :root { --teal: #0F766E; }
         .tail-container { font-family: 'Inter', system_ui, sans-serif; }
-        
+       
         .hero-bg {
             background-image: linear-gradient(rgba(15, 118, 110, 0.75), rgba(15, 118, 110, 0.85)),
                              url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-        
-        .service-card { 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+       
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .service-card:hover { 
-            transform: translateY(-12px); 
-            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25); 
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(15 118 110 / 0.25);
         }
-        
-        .nav-link { 
-            position: relative; 
+       
+        .nav-link {
+            position: relative;
         }
-        .nav-link:after { 
-            content: ''; 
-            position: absolute; 
-            width: 0; 
-            height: 2px; 
-            bottom: -2px; 
-            left: 0; 
-            background-color: #0F766E; 
-            transition: all 0.3s ease; 
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0F766E;
+            transition: all 0.3s ease;
         }
         .nav-link:hover:after { width: 100%; }
+
+        /* Book Now Button - Subtle Flash Animation */
+        .book-now-btn {
+            animation: pulse 2.8s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.5); 
+            }
+            50% { 
+                box-shadow: 0 0 0 15px rgba(15, 118, 110, 0); 
+            }
+        }
 
         /* Mobile Menu */
         #mobile-menu {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .bot-field { display: none !important; }
     </style>
 </head>
 <body class="tail-container bg-white text-gray-900 overflow-x-hidden">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR - Improved spacing & flashing Book Now -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <!-- Logo -->
@@ -78,16 +90,19 @@
                 <a href="reviews.html" class="nav-link hover:text-teal-600 transition-colors">Reviews</a>
                 <a href="index.html#guarantees" onclick="smoothScrollTo('guarantees')" class="nav-link hover:text-teal-600 transition-colors">Guarantees</a>
                 <a href="index.html#contact" onclick="smoothScrollTo('contact')" class="nav-link hover:text-teal-600 transition-colors">Contact</a>
-            <a href="booking.html" class="bg-teal-700 hover:bg-teal-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
-    <i class="fas fa-calendar-check mr-1"></i> Book Now
-</a>
+                
+                <!-- Book Now Button with flash -->
+                <a href="booking.html" 
+                   class="book-now-btn bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-md">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                </a>
             </div>
 
             <!-- Desktop CTA -->
             <div class="hidden md:flex items-center gap-4">
-                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
+                <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
                    target="_blank"
-                   class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
+                   class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full text-sm font-semibold transition-all">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
                 <a href="tel:07961618546"
@@ -115,9 +130,9 @@
                 <a href="reviews.html" onclick="closeMobileMenu()" class="hover:text-teal-600">Reviews</a>
                 <a href="index.html#guarantees" onclick="closeMobileMenu()" class="hover:text-teal-600">Guarantees</a>
                 <a href="index.html#contact" onclick="closeMobileMenu()" class="hover:text-teal-600">Contact</a>
-                
+               
                 <div class="pt-6 border-t flex flex-col gap-4">
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
                        target="_blank"
                        class="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white py-4 rounded-2xl font-semibold">
                         <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
@@ -126,17 +141,21 @@
                        class="flex items-center justify-center gap-3 bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-2xl font-semibold">
                         <i class="fas fa-phone text-2xl"></i> Call 07961 618 546
                     </a>
+                    <a href="booking.html"
+                       class="flex items-center justify-center gap-3 bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-2xl font-semibold">
+                        <i class="fas fa-calendar-check text-2xl"></i> Book Now
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO (unchanged) -->
     <header id="home" class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
              style="background-image: url('photo2.png'); filter: brightness(0.65) contrast(1.1);"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        
+       
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-2 bg-white/90 text-teal-900 px-6 py-2 rounded-3xl font-bold text-lg mb-6">
@@ -146,13 +165,13 @@
                     London's superior 24hr service company<br>will fix it!
                 </h1>
                 <p class="text-2xl md:text-3xl font-light mb-10">In the meantime... pop the kettle on!</p>
-                
+               
                 <div class="flex flex-wrap gap-4">
                     <a href="tel:07961618546"
                        class="bg-white text-teal-800 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all active:scale-95">
                         <i class="fas fa-phone"></i> CALL NOW
                     </a>
-                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!" 
+                    <a href="https://wa.me/447961618546?text=Hi%20Greenwich%20Plumbers%2C%20I%20need%20urgent%20help!"
                        target="_blank"
                        class="bg-green-500 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-3 hover:scale-105 transition-all active:scale-95">
                         <i class="fab fa-whatsapp text-3xl"></i> WhatsApp
@@ -166,6 +185,7 @@
         </div>
     </header>
 
+    <!-- WHY US, SERVICES, GUARANTEES, CONTACT, FOOTER, FLOATING WHATSAPP, TAWK.TO and all scripts remain exactly as you provided (unchanged) -->
     <!-- WHY US -->
     <section id="why-us" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
@@ -257,12 +277,12 @@
                 <input name="name" type="text" placeholder="Your Name" class="w-full px-6 py-5 border rounded-2xl focus:outline-none focus:border-teal-600">
                 <input name="phone" type="tel" placeholder="Phone Number" class="w-full px-6 py-5 border rounded-2xl focus:outline-none focus:border-teal-600">
                 <textarea name="message" rows="4" placeholder="Brief description of the problem..." class="w-full px-6 py-5 border rounded-3xl focus:outline-none focus:border-teal-600"></textarea>
-                <button type="submit" 
+                <button type="submit"
                         class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-6 rounded-3xl text-xl transition-all">
                     SEND MESSAGE - WE'LL CALL YOU BACK FAST
                 </button>
             </form>
-            <div id="successMsg" style="display:none;" 
+            <div id="successMsg" style="display:none;"
                  class="mt-6 bg-green-50 border-2 border-green-400 text-green-700 font-semibold text-center py-5 px-6 rounded-2xl">
                 Thank you! Our team will call you back within minutes. Pop the kettle on!
             </div>
@@ -316,7 +336,6 @@
         // Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileBtn.addEventListener('click', () => {
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.remove('hidden');
@@ -325,7 +344,6 @@
                 closeMobileMenu();
             }
         });
-
         function closeMobileMenu() {
             mobileMenu.classList.add('hidden');
             mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
@@ -344,17 +362,17 @@
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const data = new FormData(this);
-            
+           
             try {
-                await fetch('/', { 
-                    method: 'POST', 
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
-                    body: new URLSearchParams(data).toString() 
+                await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(data).toString()
                 });
-                
+               
                 this.style.display = 'none';
                 document.getElementById('successMsg').style.display = 'block';
-                
+               
                 setTimeout(() => {
                     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth' });
                 }, 100);
